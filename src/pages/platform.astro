@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const features = [
+  {
+    number: '1',
+    title: 'Independent and unbiased',
+    desc: 'Satori is an open AI medical imaging platform that consolidates a range of AI algorithms, providing physicians with the flexibility to select the most suitable tools for their needs.',
+  },
+  {
+    number: '2',
+    title: 'Friendly & Unified UI',
+    desc: 'It provides a very friendly User Interface and provides dedicated workflows that seamlessly integrate into the daily clinical routine.',
+  },
+  {
+    number: '3',
+    title: 'Access to third party AI algorithms',
+    desc: 'AI algorithms for various modalities and subspecialties from multiple algorithm vendors.',
+  },
+  {
+    number: '4',
+    title: 'Enhance clinical workflows',
+    desc: 'Algorithms are thoughtfully incorporated into clinical workflows, aligning with physicians\' requirements for a streamlined application.',
+  },
+];
+
+const audiences = [
+  {
+    tag: 'For Physicians',
+    title: 'Boost productivity and maximize diagnostic confidence',
+    img: 'https://testdynamics.net/wp-content/uploads/2023/08/Physicians-using-a-Medical-Imaging-Platform.jpg',
+    icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector.png',
+    iconAlt: 'Satori Icon Stetoscope',
+    features,
+    isOdd: true,
+  },
+  {
+    tag: 'For Medical IT professionals',
+    title: 'AI-powered platform for more value with less effort',
+    img: 'https://testdynamics.net/wp-content/uploads/2023/08/Medical-IT-professionals-Satori-Healthcare.jpg',
+    icon: 'https://testdynamics.net/wp-content/uploads/2023/01/Icon_Medical-IT-Professionals.png',
+    iconAlt: 'Satori Icon List',
+    features: [
+      { number: '1', title: 'Single integration', desc: 'Satori provides access through a single integration point making deployment and management of AI easy.' },
+      { number: '2', title: 'Flexible and scalable', desc: 'Offering a diverse range of third party AI algorithms, each of which can be activated or deactivated at the physicians\' discretion.' },
+      { number: '3', title: 'Vendor Independent', desc: 'The Satori medical imaging platform is vendor-neutral, integrating a range of AI algorithms from various providers.' },
+      { number: '4', title: 'Providing AI algorithms insights', desc: 'The platform enables medical IT professionals to monitor algorithm usage and evaluate performance using clinically relevant data.' },
+    ],
+    isOdd: false,
+  },
+  {
+    tag: 'For Hospital Administrators',
+    title: 'Access to AI, highly scalable, through a single contract',
+    img: 'https://testdynamics.net/wp-content/uploads/2023/08/Hospital-Administrators-using-AI-Platform.jpg',
+    icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-1.png',
+    iconAlt: 'Satori Icon Hospital',
+    features: [
+      { number: '1', title: 'Avoid vendor lock in', desc: 'Satori is vendor-neutral, allowing institutions to have access to a range of third party AI algorithms, through a single integration.' },
+      { number: '2', title: 'State-of-the-Art', desc: 'By providing access to third party AI algorithms, the platform enables physicians to enhance patient care through modern technology.' },
+      { number: '3', title: 'Boost efficiency and productivity', desc: 'The platform streamlines AI integration by offering a single solution, significantly simplifying the deployment and management of AI technology.' },
+      { number: '4', title: 'Single contract', desc: 'Hospital administrators gain access to third party AI algorithms under a single contract, enhancing convenience, cost-effectiveness, and predictability.' },
+    ],
+    isOdd: true,
+  },
+];
+---
+
+<Layout title="Satori — Medical Imaging AI Platform" description="Discover the most powerful Medical Imaging AI Platform. Seamless integration with automated workflows.">
+
+  <!-- HERO -->
+  <section class="product-hero-sec">
+    <div class="container container-fluid-right">
+      <div class="row">
+        <div class="col-left">
+          <div class="hero-content">
+            <p class="title-tag bg-txt" style="font-size:12px;margin-bottom:20px;">SATORI PLATFORM</p>
+            <h1 class="sub-title" style="color:#fff;line-height:1.4;">
+              Discover the most Powerful Medical Imaging <span class="gradient-text-blue">AI Platform</span>
+            </h1>
+            <p class="description" style="color:#8896ab;font-size:20px;margin-top:20px;">
+              An innovative imaging platform designed to serve as a bridge between third party AI algorithms and healthcare providers. A seamless integration with automated workflows and a user-friendly interface right into your medical routine.
+            </p>
+            <div class="button-group" style="margin-top:30px;">
+              <a href="/request-demo" class="btn">Request Demo</a>
+              <a href="#how_it_work" class="btn border-btn" style="color:#fff;">Benefits</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="img-wrap">
+            <img
+              src="https://testdynamics.net/wp-content/uploads/2023/10/medical-imaging-platform.jpeg"
+              alt="Medical Imaging Platform Satori"
+              style="border-radius:12px;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-how-it-work padding-section-large" id="how_it_work" style="background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/design-system.png');background-repeat:no-repeat;background-position:center;background-size:cover;">
+    <div class="container">
+      <div class="title-wrapper text-center" style="margin-bottom:60px;">
+        <p class="title-tag" style="background:#eef0f3;padding:4px;border-radius:2px;display:inline-block;margin-bottom:20px;font-size:12px;">HOW IT WORKS</p>
+        <h2 class="sub-title" style="color:#2a3342;max-width:900px;margin:0 auto 20px;">
+          Streamline medical imaging: One single platform integration, powered by state of the art AI algorithms.
+        </h2>
+        <p style="max-width:700px;margin:0 auto;color:#556987;font-size:20px;">
+          Integrating a range of medical imaging third party AI algorithms, the Satori platform serves as a comprehensive, intelligent one-stop solution for hospitals and physicians.
+        </p>
+      </div>
+
+      <div class="img-wrapper" style="margin-bottom:60px;">
+        <div style="max-width:768px;margin:0 auto;">
+          <img
+            src="https://testdynamics.net/wp-content/uploads/2023/10/medical-imaging-platform.jpeg"
+            alt="Medical Imaging Platform"
+            style="width:100%;border-radius:24px;"
+          />
+        </div>
+      </div>
+
+      <div class="system-product-wrapper">
+        <div class="product-inner" style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;">
+          {[
+            { icon: 'https://testdynamics.net/wp-content/uploads/2023/01/flow-chart.svg', label: 'Smart workflow integration' },
+            { icon: 'https://testdynamics.net/wp-content/uploads/2023/01/user-friendly.svg', label: 'User friendly features' },
+            { icon: 'https://testdynamics.net/wp-content/uploads/2023/01/open-source.svg', label: 'Independent, open and unbiased' },
+          ].map(item => (
+            <div class="product-cart" style="width:calc(33.333% - 20px);cursor:pointer;">
+              <div class="text-center" style="padding:32px;border-radius:24px;">
+                <div class="icon-wrapper" style="background:#fff;border-radius:6px;width:65px;height:65px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;box-shadow:0px 20px 25px -5px rgba(85,105,135,0.1);">
+                  <img src={item.icon} alt={item.label} style="width:32px;" />
+                </div>
+                <p class="card-small-title" style="font-size:20px;font-weight:700;color:#2a3342;margin:0;">{item.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTIONS (alternating) -->
+  {audiences.map((audience) => (
+    <section class={`features-section ${audience.isOdd ? 'odd-section' : 'even-section'} padding-section-large`} style="position:relative;overflow:hidden;">
+      <div class="features-wrapper">
+        <div class={`d-flex ${audience.isOdd ? '' : 'reverse'}`} style={`display:flex;flex-wrap:wrap;align-items:center;gap:30px 75px;${!audience.isOdd ? 'flex-direction:row-reverse;' : ''}`}>
+
+          <!-- Content -->
+          <div class="features-content-wrap" style="width:calc(50% - 75px);flex-grow:1;padding:36px 0 36px 36px;">
+            <div class="title-wrapper">
+              <div class="text-left">
+                <p class="title-tag" style="background:#eef0f3;padding:4px;border-radius:2px;display:inline-block;margin-bottom:20px;font-size:12px;">{audience.tag}</p>
+                <h2 class="title" style="color:#2a3342;font-size:48px;font-weight:700;margin-bottom:40px;line-height:1;">{audience.title}</h2>
+              </div>
+              <div class="feature-list-boxs" style="display:flex;flex-wrap:wrap;gap:32px;">
+                {audience.features.map(f => (
+                  <div class="feature-boxs" style="width:calc(50% - 32px);">
+                    <div class="number-wrap" style="width:48px;height:48px;background:#000;color:#fff;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;">{f.number}</div>
+                    <div class="sub-content">
+                      <p class="sub-content-title" style="font-size:20px;color:#2a3342;font-weight:700;margin-bottom:8px;">{f.title}</p>
+                      <p style="font-size:16px;color:#556987;">{f.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="features-img-wrap" style="width:calc(50% - 75px);flex-grow:1;position:relative;">
+            <div class="image-box">
+              <img
+                src={audience.img}
+                alt={audience.tag}
+                style="width:456px;height:456px;border-radius:24px;object-fit:cover;"
+              />
+            </div>
+            <div class="imgs-wrapper" style="position:absolute;z-index:9;">
+              <div class="icon-box" style="background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/polygon-feature-icon.svg');height:179px;width:165px;background-size:165px;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;margin-top:-80px;">
+                <img src={audience.icon} alt={audience.iconAlt} style="position:relative;top:-9px;max-width:60px;" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- CTA -->
+  <CtaSection />
+
+</Layout>
+
+<style>
+  /* Hero */
+  .product-hero-sec {
+    position: relative;
+    overflow: hidden;
+    background-color: #2a3342;
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/frame-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+  }
+
+  .container-fluid-right { padding: 0; }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 850px;
+  }
+
+  .col-left {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    padding-left: calc((100% - 1390px + 30px) / 2);
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .col-right {
+    width: 55%;
+  }
+
+  .hero-content { max-width: 580px; }
+
+  .img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 150px;
+    height: 100%;
+  }
+  .img-wrap img { width: 100%; }
+
+  /* Features alternating */
+  .features-section.odd-section { background: #f7f8f9; }
+  .features-section.even-section { background: #fff; }
+
+  @media (max-width: 992px) {
+    .col-left { width: 100%; padding-left: 15px; padding-top: 150px; }
+    .col-right { width: 100%; }
+    .img-wrap { padding-top: 30px; }
+    .features-content-wrap { width: 100% !important; padding: 0 18px 48px !important; }
+    .features-img-wrap { width: calc(100% + 30px) !important; }
+    .feature-boxs { width: 100% !important; }
+  }
+</style>

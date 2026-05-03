@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const categories = ['All', 'Events', 'Tech Insights', 'Updates'];
+
+const posts = [
+  { title: 'The Future of Radiology: Insights from AI Providers at RSNA 2024', date: 'Dec 2024', category: 'Events', img: 'https://testdynamics.net/wp-content/uploads/2024/01/RSNA_2023.jpg', slug: '#' },
+  { title: 'TestDynamics and HOPPR Unveil Platform to Accelerate Fine-tuned AI Models', date: 'Nov 2024', category: 'Updates', img: 'https://testdynamics.net/wp-content/uploads/2024/01/HOPPR-X-TD-Graphics-Wide-1.jpeg', slug: '#' },
+  { title: 'TestDynamics Achieves SOC 2 Type II Compliance', date: 'Oct 2024', category: 'Updates', img: 'https://testdynamics.net/wp-content/uploads/2024/01/TestDynamics-Achieves-SOC-2-Type-I-Compliance.jpeg', slug: '#' },
+  { title: 'Harnessing AI: The Future of Deep Learning Medical Imaging', date: 'Sep 2024', category: 'Tech Insights', img: 'https://testdynamics.net/wp-content/uploads/2023/07/Harnessing-AI-The-Future-of-Deep-Learning-in-Medical-Imaging.jpeg', slug: '#' },
+  { title: 'Marketplace or Platform? Why the Difference Matters in Imaging AI', date: 'Aug 2024', category: 'Tech Insights', img: 'https://testdynamics.net/wp-content/uploads/2023/10/AI-medical-imaging-solutions-for-healthcare.jpeg', slug: '#' },
+  { title: 'TestDynamics Proudly Joins the Cedars-Sinai Accelerator Program', date: 'Jun 2024', category: 'Updates', img: 'https://testdynamics.net/wp-content/uploads/2023/07/TestDynamics-joining-Cedars-Sinai-Accelerator-Program.jpeg', slug: '#' },
+  { title: 'Machine Learning vs AI: Unraveling the Key Differences', date: 'May 2024', category: 'Tech Insights', img: 'https://testdynamics.net/wp-content/uploads/2024/01/Machine-Learning-vs-AI-TestDynamics.jpeg', slug: '#' },
+  { title: 'AI applications in Healthcare: Top Applications and Benefits', date: 'Apr 2024', category: 'Tech Insights', img: 'https://testdynamics.net/wp-content/uploads/2023/07/AI-applications-in-Healthcare.jpeg', slug: '#' },
+  { title: 'The Rise of Autonomous Healthcare: Exploring the Impact of AI', date: 'Mar 2024', category: 'Tech Insights', img: 'https://testdynamics.net/wp-content/uploads/2024/01/Autonomous-Healthcare1.jpeg', slug: '#' },
+];
+---
+
+<Layout title="News — TestDynamics" description="Stay up to date with the latest news, insights, and press releases from TestDynamics.">
+
+  <!-- BLOG HEAD -->
+  <section class="blog-head-section">
+    <div class="container">
+      <div class="blog-head-wrap">
+        <div class="content">
+          <p class="title-tag" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:900;font-size:12px;margin-bottom:16px;">NEWS & EVENTS</p>
+          <h1 style="color:#fff;font-size:48px;font-weight:700;margin-bottom:45px;padding-right:20%;">Welcome to our <span class="gradient-text">News hub!</span></h1>
+
+          <!-- Search -->
+          <div class="search-box">
+            <div style="position:relative;max-width:358px;overflow:hidden;">
+              <svg style="position:absolute;top:50%;left:16px;transform:translateY(-50%);width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="#556987" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+              <input type="text" placeholder="Search articles..." id="search-input" style="border:1px solid #d5dae1;border-radius:6px;width:100%;height:40px;padding:7px 15px 7px 42px;font-size:16px;font-family:Manrope,sans-serif;background:#fff;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG LIST -->
+  <section class="blog-list-section padding-section-medium">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:30px;">
+
+        <!-- Filter sidebar -->
+        <div style="width:220px;flex-shrink:0;">
+          <p style="font-size:16px;font-weight:600;color:#556987;margin-bottom:8px;">CATEGORIES</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            {categories.map(cat => (
+              <button class="cat-btn" data-cat={cat} style="background:#f7f8f9;padding:8px 12px;border-radius:6px;color:#333f51;font-size:16px;font-weight:700;border:1px solid #f7f8f9;height:40px;text-align:left;cursor:pointer;font-family:Manrope,sans-serif;transition:all 0.3s;">
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Blog grid -->
+        <div style="flex:1;">
+          <div class="blog-list-box" id="blog-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+            {posts.map(post => (
+              <div class="blog-col-item" data-cat={post.category}>
+                <div class="feature-img" style="margin-bottom:16px;">
+                  <div class="img-box" style="height:272px;position:relative;overflow:hidden;border-radius:12px;">
+                    <a href={post.slug} style="display:block;height:100%;">
+                      <img
+                        src={post.img}
+                        alt={post.title}
+                        style="width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform 0.5s;"
+                        onmouseover="this.style.transform='scale(1.1)'"
+                        onmouseout="this.style.transform='scale(1)'"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="blog-info" style="padding:0 12px;">
+                  <div class="medium-text" style="margin-bottom:12px;">
+                    <a href={post.slug} style="font-weight:700;color:#333f51;font-size:20px;line-height:1.34;display:block;">{post.title}</a>
+                  </div>
+                  <div class="autore-box" style="margin-top:12px;display:flex;align-items:center;gap:10px;">
+                    <span style="font-size:16px;color:#404f65;">{post.date}</span>
+                    <span style="color:#fe3e70;">•</span>
+                    <span style="font-size:16px;color:#404f65;">{post.category}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <CtaSection />
+
+</Layout>
+
+<style>
+  .blog-head-section {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    background: radial-gradient(50% 50% at 50% 50%, #101225 0%, #101225 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .blog-head-section::before {
+    content: "";
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/blog-curves.svg');
+    position: absolute;
+    right: 0; top: 0; left: 0; bottom: 0;
+    width: 100%; height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    z-index: 0;
+  }
+  .blog-head-wrap { position: relative; z-index: 1; }
+
+  .cat-btn:hover,
+  .cat-btn.active {
+    background: transparent !important;
+    border-color: #9281ff !important;
+    background: linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%) border-box !important;
+  }
+
+  @media (max-width: 991px) {
+    #blog-grid { grid-template-columns: repeat(2,1fr) !important; }
+  }
+  @media (max-width: 639px) {
+    #blog-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<script>
+  // Category filter
+  const catBtns = document.querySelectorAll('.cat-btn');
+  const blogItems = document.querySelectorAll('.blog-col-item');
+
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      blogItems.forEach(item => {
+        if (cat === 'All' || item.dataset.cat === cat) {
+          (item as HTMLElement).style.display = 'block';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Search filter
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  searchInput?.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase();
+    blogItems.forEach(item => {
+      const title = item.querySelector('a')?.textContent?.toLowerCase() || '';
+      (item as HTMLElement).style.display = title.includes(q) ? 'block' : 'none';
+    });
+  });
+</script>

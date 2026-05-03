@@ -1,0 +1,230 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Our platform', href: '/platform' },
+  { label: 'About us', href: '/about' },
+  { label: 'News', href: '/news' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header class="header-wrapper" id="site-header">
+  <div class="header-container">
+    <div class="heading-inner">
+
+      <!-- Logo -->
+      <div class="site-branding">
+        <a href="/" class="logo-box">
+          <img
+            src="https://testdynamics.net/wp-content/uploads/2022/12/header-logo-white.svg"
+            alt="TestDynamics"
+            class="main-logo"
+            width="170"
+          />
+          <img
+            src="https://testdynamics.net/wp-content/uploads/2022/12/fixed-header-logo.svg"
+            alt="TestDynamics"
+            class="fixed-logo"
+            width="170"
+          />
+        </a>
+      </div>
+
+      <!-- Nav -->
+      <nav class="main-navigation">
+        <div class="primary-inner" id="primary-nav">
+          <ul class="menu">
+            {navLinks.map(link => (
+              <li class="menu-item">
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      <!-- CTA + Burger -->
+      <div class="button-group">
+        <div class="button-inner">
+          <a href="/request-demo" class="btn border-btn">Request Demo</a>
+        </div>
+        <div class="humbergar-menu">
+          <button class="burger" id="burger-btn" aria-label="Menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<style>
+  .header-wrapper {
+    padding: 0 0 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .header-wrapper.fixed {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .header-wrapper.fixed .main-logo { display: none; }
+  .header-wrapper.fixed .fixed-logo { display: block !important; }
+  .header-wrapper.fixed .menu-item a { color: #4d5f7a !important; }
+  .header-wrapper.fixed .burger .burger-line { background-color: #2a3342; }
+  .header-wrapper.fixed .button-inner .btn.border-btn { color: #4d5f7a; }
+
+  .header-container {
+    padding: 10px 6% 0;
+  }
+  @media (max-width: 1199px) {
+    .header-container { padding: 20px 35px 0; }
+  }
+
+  .heading-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .site-branding { position: relative; z-index: 999; }
+  .logo-box { display: block; }
+  .logo-box img { width: 100%; max-width: 170px; height: auto; }
+  .main-logo { display: block; }
+  .fixed-logo { display: none; }
+
+  /* Nav */
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-item { margin: 0 33px; }
+  @media (max-width: 1499px) { .menu-item { margin: 0 20px; } }
+  @media (max-width: 1199px) { .menu-item { margin: 0 10px; } }
+
+  .menu-item a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 3px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .menu-item a:hover {
+    color: #eef0f3;
+    border-bottom: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(270deg, #9281ff 0%, #fe3e70 52.55%, #ff6142 100%);
+  }
+
+  /* Buttons */
+  .button-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .button-inner a {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 12px;
+  }
+
+  /* Burger */
+  .humbergar-menu { display: none; }
+  @media (max-width: 991px) { .humbergar-menu { display: block; } }
+  @media (max-width: 991px) { .button-inner { display: none; } }
+
+  .burger {
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    height: 21px;
+    background: none;
+    border: none;
+  }
+  .burger-line {
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+  }
+  .burger-line:nth-child(1) { top: 0; }
+  .burger-line:nth-child(2) { top: 8.5px; width: calc(100% - 8px); }
+  .burger-line:nth-child(3) { top: 18px; }
+
+  .burger.is-active .burger-line:nth-child(1) { top: 0.5rem; transform: rotate(135deg); }
+  .burger.is-active .burger-line:nth-child(2) { opacity: 0; display: none; }
+  .burger.is-active .burger-line:nth-child(3) { top: 0.5rem; transform: rotate(-135deg); }
+
+  /* Mobile nav */
+  @media (max-width: 991px) {
+    .primary-inner {
+      position: fixed;
+      width: 100vw;
+      top: -100%;
+      left: 0;
+      z-index: 9;
+      background: #2a3342;
+      padding: 0 35px;
+      height: 100%;
+      padding-top: 85px;
+      transition: top 0.4s ease;
+    }
+    .primary-inner.is-active { top: 0; }
+    .menu { flex-direction: column; }
+    .menu-item {
+      margin: 4px 0;
+      border-radius: 6px;
+      width: 100%;
+    }
+    .menu-item a {
+      width: 100%;
+      padding: 14px;
+      background-color: #333f51;
+      border-radius: 6px;
+      display: flex;
+      color: #fff !important;
+      border: none !important;
+    }
+    .menu-item a:hover { background-color: #4d5f7a; }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const burger = document.getElementById('burger-btn');
+  const nav = document.getElementById('primary-nav');
+
+  // Sticky header
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('fixed');
+    } else {
+      header?.classList.remove('fixed');
+    }
+  });
+
+  // Mobile menu
+  burger?.addEventListener('click', () => {
+    burger.classList.toggle('is-active');
+    nav?.classList.toggle('is-active');
+  });
+</script>

@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const values = [
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-7.svg', title: 'Patient First', desc: 'We are driven by ethics and patient-first approach' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-3.svg', title: 'Teamwork', desc: 'Together we achieve more' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-6.svg', title: 'Transparency', desc: 'We are driven by ethics and patient-first approach' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-5.svg', title: 'Innovation', desc: 'We push boundaries with an open minded, curious attitude' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-4.svg', title: 'No-nonsense', desc: 'We are driven by ethics and patient-first approach' },
+];
+
+const team = [
+  { name: 'Lior Eshel', title: 'Founder & CEO', img: 'https://testdynamics.net/wp-content/uploads/2023/07/Lior-Eshel-1.png', linkedin: 'https://www.linkedin.com/in/lioransher/' },
+  { name: 'Elie Basse, MD, MBA', title: 'Chief Medical Officer', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Elie-Basse-2.jpg', linkedin: 'https://www.linkedin.com/in/elie-basse-a80b36a/' },
+  { name: 'Ofer Pinhasi', title: 'Chief Product Officer', img: 'https://testdynamics.net/wp-content/uploads/2024/10/Ofer2.jpeg', linkedin: 'https://www.linkedin.com/in/oferpinhasi/' },
+];
+
+const advisors = [
+  { name: 'Richard Silbergleit, MD', title: 'Chairman of Radiology, Royal Oak, Corewell Health System, MI', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Richard-Silbergleit.jpg' },
+  { name: 'Devon Klein, MD', title: 'Chairman, Department of Radiology and Radiation Oncology, Overlook Medical Center at Atlantic Health System, NJ', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Devon-Klein-1.jpg' },
+  { name: 'Suja Chandrasekaran', title: 'Global Chief Executive, Former Fortune 1 Exec, Board Member - Healthcare', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Suja-Chandrasekaran.jpg' },
+  { name: 'Ronn Goldberg, MD', title: 'Abdominal Radiologist, Toronto University, Canada', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Ronn-Goldberg.jpg' },
+  { name: 'Herman Oosterwijk', title: 'Expert trainer/consultant on PACS, DICOM, HL7, FDA filings', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Herman-Oosterwijk.jpg' },
+  { name: 'Phillip Adler, MD', title: 'Diagnostic and Interventional Radiologist, Private Radiology group, Mclaren Health and Trinity Health System, MI', img: 'https://testdynamics.net/wp-content/uploads/2023/01/Philip-Adler.jpg' },
+];
+
+const benefits = [
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-13.svg', title: 'Full remote work', desc: 'Work from anywhere you want, with flexible times suited to your lifestyle.' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-8.svg', title: 'Growth & Bonuses', desc: 'We will help you reach your personal milestones and professional development.' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-9.svg', title: 'Health insurance', desc: 'We cover health, dental and vision insurances. We offer also lifestyle incentives.' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-10.svg', title: 'Multicultural by choice', desc: 'We encourage a dynamic, multicultural region-agnostic work environment.' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-11.svg', title: 'Holidays & time-off', desc: 'We guarantee at least 4 weeks of paid vacation and cover also paid parental/family leave.' },
+  { icon: 'https://testdynamics.net/wp-content/uploads/2022/12/Vector-12.svg', title: 'Pension plans', desc: 'We support 401k for US as well as equivalent pension funds in your country of residency.' },
+];
+
+const jobs = [
+  { title: 'Full-Stack Developer', type: 'Full Time', location: 'Remote Friendly', pdf: 'https://testdynamics.net/wp-content/uploads/2022/12/TestDynamics-Job-Vacancy-Full-Stack-Developer_compressed.pdf' },
+  { title: 'Front-End Developer', type: 'Full Time', location: 'Remote Friendly', pdf: 'https://testdynamics.net/wp-content/uploads/2022/12/TestDynamics-Job-Vacancy-Front-End-Developer_compressed.pdf' },
+];
+---
+
+<Layout title="About Us — The Team Behind TestDynamics" description="TestDynamics is set to revolutionize the incorporation of AI solutions for medical imaging and diagnostics.">
+
+  <!-- PAGE HEADER -->
+  <section class="about-hero padding-section-large" style="background-color:#2a3342;position:relative;overflow:hidden;min-height:500px;display:flex;align-items:center;">
+    <div style="position:absolute;inset:0;background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/dots.svg');background-repeat:repeat;z-index:0;opacity:0.3;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 50% at 50% 50%,rgba(42,51,66,0) 0%,#2a3342 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;padding-top:120px;">
+      <p class="title-tag" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);padding:4px;border-radius:2px;display:inline-block;font-size:12px;color:#fff;margin-bottom:20px;">NICE TO MEET YOU</p>
+      <h1 class="sub-title" style="color:#fff;font-size:60px;max-width:800px;margin-bottom:30px;">
+        We are TestDynamics and we bring you a <span class="gradient-text">revolution</span>
+      </h1>
+      <p style="color:#8896ab;font-size:20px;max-width:700px;">
+        TestDynamics is set to revolutionize the incorporation of AI solutions for medical imaging and diagnostics. The team is comprised of both engineers and medical professionals who have made it their missions to finally make AI accessible to physicians, hospitals and the patients they treat!
+      </p>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="container" style="padding-top:60px;padding-bottom:0;">
+    <img
+      src="https://testdynamics.net/wp-content/uploads/2023/10/TestDynamics-AI-healthcare-solutions.jpeg"
+      alt="TestDynamics AI healthcare solutions team"
+      style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;"
+    />
+  </div>
+
+  <!-- OUR CULTURE / VALUES -->
+  <section class="culture-section padding-section-large" style="background:radial-gradient(50% 50% at 50% 50%,rgba(247,248,249,0) 0%,#f7f8f9 100%);">
+    <div class="container">
+      <div class="core-section text-center" style="margin-bottom:60px;">
+        <p class="title-tag" style="background:#fff;padding:4px;border-radius:4px;display:inline-block;font-size:12px;margin-bottom:20px;">OUR CULTURE</p>
+        <h2 class="sub-title" style="color:#2a3342;max-width:700px;margin:0 auto;">What defines and drives us forward</h2>
+      </div>
+      <div class="core-card-main" style="display:flex;flex-wrap:wrap;gap:32px;">
+        {values.map((v, i) => (
+          i === 1 ? (
+            <div class="core-card img-box" style="width:calc(33.33% - 64px);flex-grow:1;padding:0;background:transparent!important;border-radius:24px;overflow:hidden;">
+              <img
+                src="https://testdynamics.net/wp-content/uploads/2023/10/Man-working-on-TestDynamics.png"
+                alt="TestDynamics team"
+                style="width:100%;height:100%;object-fit:cover;border-radius:24px;"
+              />
+            </div>
+          ) : (
+            <div class="core-card" style="background:#fff;border-radius:24px;padding:32px;width:calc(33.33% - 64px);flex-grow:1;height:272px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all 0.5s;box-shadow:0 10px 15px -3px rgba(85,105,135,0.1);">
+              <div class="icons-wrap" style="background:#fff;border-radius:6px;box-shadow:0px 20px 25px -5px rgba(85,105,135,0.1);width:65px;height:65px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                <img src={v.icon} alt={v.title} style="width:32px;" />
+              </div>
+              <h4 class="card-small-title" style="font-size:24px;font-weight:700;color:#2a3342;margin-bottom:12px;">{v.title}</h4>
+              <p style="font-size:16px;color:#556987;text-align:center;">{v.desc}</p>
+            </div>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM -->
+  <section class="team-section padding-section-large">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:50px;gap:20px;">
+        <div>
+          <p class="title-tag" style="background:#eef0f3;padding:4px;border-radius:2px;display:inline-block;font-size:12px;margin-bottom:20px;">OUR TEAM</p>
+          <h2 class="sub-title" style="color:#2a3342;font-size:48px;">Meet the faces behind TestDynamics</h2>
+        </div>
+        <a href="#join_our_team" class="btn border-btn" style="color:#2a3342;border-color:#2a3342;">Open Positions</a>
+      </div>
+
+      <div class="team-main-list" style="display:flex;flex-wrap:wrap;gap:32px;">
+        {team.map(member => (
+          <div class="position-card" style="width:calc(33.33% - 64px);flex-grow:1;display:flex;flex-direction:column;">
+            <div class="team-img" style="position:relative;padding-bottom:107%;overflow:hidden;border-radius:0;">
+              <img
+                src={member.img}
+                alt={member.name}
+                style="position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+              />
+            </div>
+            <h4 class="position-name" style="font-size:24px;font-weight:700;color:#2a3342;margin-top:16px;margin-bottom:4px;">{member.name}</h4>
+            <p style="font-size:18px;color:#556987;margin-bottom:12px;">{member.title}</p>
+            <div class="socila-icon">
+              <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://testdynamics.net/wp-content/uploads/2023/01/LinkedIn_-_Team_members.svg"
+                  alt="LinkedIn"
+                  style="width:24px;transition:all 0.2s;"
+                />
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISORS -->
+  <section class="advisors-section padding-section-large" style="background:radial-gradient(50% 50% at 50% 50%,rgba(247,248,249,0) 0%,#f7f8f9 100%);">
+    <div class="container">
+      <div style="margin-bottom:50px;">
+        <p class="title-tag" style="background:#eef0f3;padding:4px;border-radius:2px;display:inline-block;font-size:12px;margin-bottom:20px;">OUR ADVISORS</p>
+        <h2 class="title" style="font-size:48px;font-weight:700;color:#2a3342;max-width:800px;margin-left:auto;">TestDynamics is also backed up by renowned advisors</h2>
+      </div>
+      <div class="advisors-main-list">
+        <div class="position-row" style="display:flex;flex-wrap:wrap;gap:48px 32px;">
+          {advisors.map(advisor => (
+            <div class="position-card" style="width:calc(25% - 64px);flex-grow:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+              <div style="width:88px;height:88px;border-radius:9999px;overflow:hidden;margin-bottom:16px;">
+                <img src={advisor.img} alt={advisor.name} style="width:100%;height:100%;object-fit:cover;" />
+              </div>
+              <h4 style="font-size:20px;font-weight:700;color:#333f51;margin-bottom:8px;">{advisor.name}</h4>
+              <p style="font-size:16px;color:#556987;">{advisor.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section padding-section-large" id="careers" style="background:#2a3342;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/dots.svg');background-repeat:repeat;z-index:0;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 50% at 50% 50%,rgba(42,51,66,0) 0%,#2a3342 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="text-center" style="margin-bottom:50px;">
+        <p class="title-tag" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);padding:4px;border-radius:2px;display:inline-block;font-size:12px;color:#fff;margin-bottom:20px;">OUR BENEFITS</p>
+        <h2 class="sub-title" style="color:#fff;font-size:48px;margin-bottom:20px;">The benefits of working at TestDynamics</h2>
+      </div>
+      <div class="benefits-main-list" style="display:flex;flex-wrap:wrap;gap:32px;">
+        {benefits.map(b => (
+          <div class="position-card" style="width:calc(33.33% - 64px);flex-grow:1;background:#333f51;border-radius:24px;padding:32px;display:flex;flex-direction:column;align-items:center;transition:all 0.5s;">
+            <div style="width:64px;height:64px;border-radius:9999px;background:#2a3342;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <img src={b.icon} alt={b.title} style="width:32px;" />
+            </div>
+            <h4 class="benefits-name" style="font-size:24px;font-weight:700;color:#fff;margin-bottom:12px;text-align:center;">{b.title}</h4>
+            <p class="benefits-text" style="color:#d5dae1;font-size:16px;text-align:center;">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS -->
+  <section class="join-team-section padding-section-large" id="join_our_team" style="background:#2a3342;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/dots.svg');background-repeat:repeat;z-index:0;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 50% at 50% 50%,rgba(42,51,66,0) 0%,#2a3342 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="text-center" style="margin-bottom:50px;">
+        <h2 class="sub-title" style="color:#fff;font-size:48px;margin-bottom:20px;">Make an impact. Start your AI job in healthcare.</h2>
+        <p style="color:#8896ab;font-size:20px;max-width:900px;margin:0 auto;">TestDynamics is leading the AI revolution by bridging the gap between Healthcare institutions and AI algorithm developers.</p>
+      </div>
+
+      <div class="job-list-wrap">
+        <div class="post-wrap">
+          {jobs.map((job, i) => (
+            <div class="vacancy-list" style={`display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;border:1px solid #404f65;border-radius:0.5rem;${i % 2 === 0 ? 'background:#333f51;' : 'background:#2a3342;'}margin-bottom:12px;transition:all 0.5s;`}>
+              <div class="content" style="flex-grow:1;">
+                <div class="content-link" style="display:flex;flex-wrap:wrap;justify-content:space-between;padding:37px 40px;gap:15px;">
+                  <div class="position-wrap">
+                    <p class="position-name" style="font-size:20px;font-weight:700;color:#fff;">{job.title}</p>
+                  </div>
+                  <div class="benifit-wrap">
+                    <span class="remote" style="color:#8896ab;font-size:16px;padding-left:25px;margin-right:24px;position:relative;">{job.location}</span>
+                    <span class="time" style="color:#8896ab;font-size:16px;padding-left:30px;position:relative;">{job.type}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap" style="padding:0 48px 0 8px;">
+                <a href={job.pdf} target="_blank" rel="noopener noreferrer" class="btn" style="font-size:16px;">View Job</a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="contact-us" style="padding:27px 40px;background:rgba(0,0,0,0.64);border-radius:0.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;margin-top:20px;">
+          <p class="contact-text" style="font-size:20px;color:#fff;flex-grow:1;">Is your dream job not listed here?</p>
+          <a href="/contact" class="btn border-btn" style="color:#fff;">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaSection btnLabel="Request a Demo" />
+
+</Layout>

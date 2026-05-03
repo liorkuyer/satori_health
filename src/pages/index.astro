@@ -1,0 +1,434 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const stats = [
+  { number: '7 Years', label: 'Algorithm age', desc: 'The age of the average algorithm currently used in those hospitals' },
+  { number: '400+', label: 'AI companies', desc: 'The AI companies that in 2023 alone are creating thousands of algorithms' },
+  { number: '20%', label: 'Hospitals', desc: 'The percentage of hospitals that currently use AI algorithms' },
+  { number: 'Limited', label: 'Access to AI', desc: 'The access and ability for hospitals to choose the AI algorithms' },
+];
+
+const features = [
+  'Seamless integration between AI Developers and Healthcare Providers',
+  'A wide range of third party AI algorithms at your command',
+  { text: 'A vendor-neutral, AI-powered medical imaging platform designed to streamline automated workflows.', link: { href: '/platform', label: 'AI-powered medical imaging platform' } },
+  'User experience-driven interface',
+];
+
+const testimonials = [
+  {
+    img: 'https://testdynamics.net/wp-content/uploads/2023/01/Suja-Chandrasekaran.png',
+    name: 'Suja Chandrasekaran',
+    title: 'Global Chief Executive, fortune 1 executive, board member- healthcare.',
+    quote: 'In order for AI to scale it must be built with explainability and transparency, fluidly help clinical decision makers in supporting them. TestDynamics is one of a kind platform that offers richness of data enabled intelligence, that is compliance to regulatory requirements.',
+  },
+  {
+    img: 'https://testdynamics.net/wp-content/uploads/2023/01/Tstimonial-Devon-Klein.jpg',
+    name: 'Dr. Devon Klein, MD',
+    title: 'Chairman of Radiology, Atlantic Health System, NJ',
+    quote: 'I have been searching for an integrated solution to provide all our AI needs. TestDynamics provides access to a wide range of AI solutions and vendors through a single platform, reducing demands on institutional resources by eliminating multiple implementations, business agreements, and compliance verifications.',
+  },
+];
+---
+
+<Layout title="AI Healthcare Solutions for Medical Imaging" description="We make AI work for healthcare. Turning clinical information and innovations into practical decision-making assets.">
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="home-header-wrapper">
+    <!-- Background -->
+    <div class="header_background-image-wrapper">
+      <div class="image-overlay-layer"></div>
+      <img
+        src="https://testdynamics.net/wp-content/themes/testdynamics/assets/images/header-bg2.png"
+        alt=""
+        class="header_background-image"
+      />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="title-tag bg-txt">AI Healthcare Solutions</p>
+          <h1 class="sub-title">We make <span class="gradient-text">AI work</span> for healthcare</h1>
+          <p class="description">Turning clinical information and innovations into practical decision-making assets</p>
+          <div class="button-group">
+            <a href="/request-demo" class="btn">Request Demo</a>
+            <a href="/platform" class="btn border-btn">Discover Satori</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom wave mask -->
+    <div class="wave-mask"></div>
+
+    <!-- Scroll indicator -->
+    <div class="onclick-down">
+      <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       THE CHALLENGE / STATS
+  ══════════════════════════════════════ -->
+  <section class="section-current-situation-wrapper padding-section-large">
+    <div class="container">
+      <div class="row current-wrapper">
+
+        <!-- Left: text + stats -->
+        <div class="col">
+          <div class="max-width-768">
+            <p class="title-tag bg-txt" style="background:#eef0f3;padding:4px;display:inline-block;border-radius:2px;margin-bottom:20px;">THE CHALLENGE</p>
+            <h2 class="sub-title" style="color:#2a3342;margin-bottom:20px;">Bringing AI and healthcare closer together</h2>
+            <p class="sub-description" style="font-size:20px;">
+              Healthcare providers see an exponential explosion in the complexity and the number of CT, MRI and X-Ray imaging studies, which creates an ever increasing backlog and pressure on specialist radiologists. Prioritizing the most severe cases, reducing errors and increasing productivity and capacity is an enormous challenge which AI can solve.
+            </p>
+          </div>
+          <div class="section-current-inner" style="margin-top:45px;">
+            {stats.map(stat => (
+              <div class="sesction-current-items">
+                <h3 class="sub-title gradient-text" style="font-size:60px;margin-bottom:8px;">{stat.number}</h3>
+                <p style="font-size:20px;font-weight:700;color:#2a3342;margin-bottom:4px;">{stat.label}</p>
+                <p class="count-content" style="font-size:16px;color:#556987;">{stat.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right: image -->
+        <div class="col">
+          <div class="section-current-img">
+            <img
+              src="https://testdynamics.net/wp-content/uploads/2023/10/Man-inspects-AI-healthcare-solutions.png"
+              alt="TestDynamics man inspecting AI healthcare solutions"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       MEET SATORI
+  ══════════════════════════════════════ -->
+  <section class="section-meet-satori padding-section-large" style="position:relative;overflow:hidden;">
+    <!-- Dark bg with overlay -->
+    <div class="header_background-image-wrapper">
+      <div class="image-overlay-layer" style="background-color:rgba(42,51,66,0.6);"></div>
+    </div>
+
+    <!-- Top wave -->
+    <div class="wave-sectiontop">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,0 L0,0 Z" fill="#f7f8f9"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position:relative;z-index:3;">
+      <p class="title-tag" style="color:#fff;background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);padding:4px;border-radius:2px;display:inline-block;margin-bottom:20px;">MEET SATORI</p>
+      <div class="row" style="display:flex;flex-wrap:wrap;align-items:center;gap:35px;margin-top:0;margin-bottom:80px;">
+        <div class="col" style="width:50%;">
+          <div class="satori-content">
+            <h2 class="sub-title" style="color:#fff;margin-bottom:30px;">Meet Satori: Your masterkey for the <span class="gradient-text">AI world</span></h2>
+            <div class="meet-satori-list">
+              <ul class="list-items">
+                <li>Seamless integration between AI Developers and Healthcare Providers</li>
+                <li>A wide range of third party AI algorithms at your command</li>
+                <li>A vendor-neutral, <a href="/platform" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:400;">AI-powered medical imaging platform</a> designed to streamline automated workflows.</li>
+                <li>User experience-driven interface</li>
+              </ul>
+            </div>
+            <div style="margin-top:40px;">
+              <a href="/platform" class="btn">Discover Satori</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="width:50%;">
+          <div class="satori-img-box" style="max-width:570px;margin-left:auto;">
+            <img
+              src="https://testdynamics.net/wp-content/uploads/2023/07/Satori-from-TestDynamics-1.png"
+              alt="Satori AI healthcare solutions"
+              style="width:100%;object-fit:contain;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom wave -->
+    <div class="wave-section">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:-2px;left:0;width:100%;">
+        <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#f7f8f9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <section class="section-testimonial padding-section-large" style="background:radial-gradient(50% 50% at 50% 50%,rgba(247,248,249,0) 0%,#f7f8f9 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="max-width-944" style="max-width:944px;margin:0 auto;">
+            {testimonials.map(t => (
+              <div class="testimonial-wrapper">
+                <div class="testimonial-inner item1">
+                  <div class="testimonial-img-box">
+                    <div class="img-box">
+                      <img src={t.img} alt={t.name} style="width:85px;height:85px;border-radius:50%;object-fit:cover;" />
+                    </div>
+                    <div class="content">
+                      <h5 class="extra-small-title" style="font-size:24px;color:#2a3342;font-weight:700;">{t.name}</h5>
+                      <span style="font-size:18px;color:#556987;display:block;padding-top:8px;">{t.title}</span>
+                    </div>
+                  </div>
+                  <div class="testi-content-inner">
+                    <h5 class="extra-small-title" style="font-size:24px;font-weight:700;color:#2a3342;line-height:1.4;">
+                      {t.quote}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaSection />
+
+</Layout>
+
+<style>
+  /* ── HERO ── */
+  .home-header-wrapper {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .header_background-image-wrapper {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+  }
+
+  .image-overlay-layer {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    z-index: 1;
+    background-color: rgba(42, 51, 66, 0.92);
+  }
+
+  .header_background-image {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  .home-header-wrapper .container { position: relative; z-index: 10; }
+
+  .home-header-wrapper .row .col {
+    margin-top: 50px;
+    margin-bottom: 120px;
+  }
+
+  .sub-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    color: #2a3342;
+  }
+
+  .home-header-wrapper .sub-title {
+    color: #fff !important;
+    font-size: 60px !important;
+    margin-bottom: 25px;
+  }
+
+  .home-header-wrapper .description {
+    font-size: 20px;
+    color: #bbc3cf;
+    margin-bottom: 35px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* Wave mask at bottom of hero */
+  .wave-mask {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    z-index: 90;
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/mask.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Scroll indicator */
+  .onclick-down {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, 0);
+  }
+
+  .onclick-down .box { cursor: pointer; }
+  .onclick-down .box span {
+    display: block;
+    width: 6px; height: 6px;
+    border-radius: 50px;
+    background-image: linear-gradient(270deg, #9281ff 0%, #fe3e70 52.55%, #ff6142 100%);
+    transform: rotate(45deg);
+    margin: 5px auto;
+    animation: animate 2s infinite;
+  }
+  .onclick-down .box span:nth-child(2) { animation-delay: -0.2s; }
+  .onclick-down .box span:nth-child(3) { animation-delay: -0.4s; }
+  .onclick-down .box span:nth-child(4) {
+    width: 14px; height: 14px;
+    animation-delay: -0.6s;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(270deg, #9281ff 0%, #fe3e70 52.55%, #ff6142 100%);
+    background-image: none;
+    margin: -7px auto;
+  }
+
+  @keyframes animate {
+    0% { transform: translateY(20%) rotate(45deg); opacity: 1; }
+    50% { transform: translateY(0%) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(20%) rotate(45deg); opacity: 1; }
+  }
+
+  /* ── STATS ── */
+  .current-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+  }
+  .current-wrapper .col { width: 50%; }
+  .section-current-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 30px;
+  }
+  .sesction-current-items { width: calc(50% - 15px); flex-grow: 1; }
+  .section-current-img {
+    width: 100%;
+    padding-left: 100px;
+  }
+  .section-current-img img {
+    border-radius: 6px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* ── MEET SATORI ── */
+  .section-meet-satori {
+    background-color: #2a3342;
+  }
+  .section-meet-satori .header_background-image-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .wave-sectiontop {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  .wave-sectiontop svg { width: 100%; height: auto; }
+
+  .section-meet-satori .row .col { width: calc(50% - 18px); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonial-wrapper {
+    margin-bottom: 60px;
+    display: grid;
+    align-items: center;
+    gap: 50px;
+    grid-template-columns: 1fr 2fr;
+  }
+  .testimonial-wrapper:last-child { margin-bottom: 0; }
+
+  .testimonial-img-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .img-box { width: 85px; height: 85px; border-radius: 50px; overflow: hidden; flex-shrink: 0; }
+  .content { width: calc(100% - 110px); }
+
+  .testi-content-inner {
+    padding: 26px 50px 10px 60px;
+    position: relative;
+  }
+  .testi-content-inner::before {
+    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+    content: "";
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/topquit.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+  .testi-content-inner::after {
+    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+    content: "";
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/bottom-quit.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .current-wrapper { flex-direction: column-reverse; }
+    .current-wrapper .col { width: 100%; }
+    .section-current-img { padding-left: 0; max-height: 360px; }
+    .section-meet-satori .row .col { width: 100%; }
+    .testimonial-wrapper { grid-template-columns: 1fr; gap: 30px; }
+    .testi-content-inner { padding: 50px 35px; }
+  }
+  @media (max-width: 767px) {
+    .home-header-wrapper .sub-title { font-size: 36px !important; }
+    .home-header-wrapper .row .col { margin-bottom: 50px; }
+    .wave-mask { height: 75px; bottom: -3px; }
+    .onclick-down { bottom: 20px; }
+    .section-current-inner { gap: 24px 20px; }
+    .sesction-current-items { width: calc(50% - 10px); }
+  }
+  @media (max-width: 480px) {
+    .wave-mask { height: 55px; }
+  }
+</style>

@@ -1,0 +1,171 @@
+---
+const footerLinks = [
+  { label: 'Our platform', href: '/platform' },
+  { label: 'About us', href: '/about' },
+  { label: 'Careers', href: '/about#careers' },
+  { label: 'Blogs', href: '/news' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const legalLinks = [
+  { label: 'Terms of Use', href: '/terms' },
+  { label: 'Privacy Notice', href: '/privacy' },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="footer-wrap">
+
+        <!-- Main footer -->
+        <div class="main-footer padding-section-medium">
+          <div class="d-flex">
+            <div class="flex-one">
+              <a href="/">
+                <img
+                  src="https://testdynamics.net/wp-content/uploads/2022/12/header-logo-white.svg"
+                  alt="TestDynamics"
+                  width="170"
+                />
+              </a>
+            </div>
+            <div class="flex-two">
+              <ul class="menu">
+                {footerLinks.map(link => (
+                  <li class="menu-item">
+                    <a href={link.href}>{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copy-right">
+          <div class="d-flex">
+            <div class="flex-one">
+              <span class="copy-right-text">© 2026 TestDynamics Holdings Inc. All rights reserved.</span>
+              <ul class="terms-menu">
+                {legalLinks.map(link => (
+                  <li><a href={link.href}>{link.label}</a></li>
+                ))}
+              </ul>
+            </div>
+            <div class="flex-two">
+              <div class="socila-icon">
+                <a href="https://www.linkedin.com/company/test-dynamics-holdings/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="https://testdynamics.net/wp-content/uploads/2022/12/linkedin.svg"
+                    alt="LinkedIn"
+                    width="24"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-wrap { padding-top: 48px; }
+
+  .d-flex {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .flex-one {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: auto;
+  }
+
+  .flex-two {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  /* Main footer nav */
+  .main-footer .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-footer .menu-item {
+    display: inline-block;
+    padding: 0 26px;
+  }
+  .main-footer .menu-item:last-child { padding-right: 0; }
+  .main-footer .menu-item:first-child { padding-left: 0; }
+
+  .main-footer .menu-item a {
+    color: #8896ab;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+  .main-footer .menu-item a:hover { color: #ff6142; }
+
+  /* Copyright */
+  .copy-right {
+    border-top: 1px solid #8896ab;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .copy-right-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #8896ab;
+  }
+
+  .terms-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .terms-menu li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8896ab;
+    transition: color 0.3s;
+  }
+  .terms-menu li a:hover { color: #ff6142; }
+
+  .socila-icon { display: flex; align-items: center; }
+  .socila-icon a { padding: 0 20px; line-height: 1; }
+  .socila-icon a:last-child { padding-right: 0; }
+  .socila-icon a img:hover {
+    filter: invert(69%) sepia(53%) saturate(6326%) hue-rotate(332deg) brightness(99%) contrast(103%);
+  }
+
+  @media (max-width: 1199px) {
+    .d-flex { justify-content: center; flex-flow: column; }
+    .main-footer .menu-item { padding: 0 7px; }
+    .copy-right .d-flex { flex-flow: column-reverse; }
+    .flex-one { justify-content: center; }
+    .flex-two { justify-content: center; }
+  }
+
+  @media (max-width: 767px) {
+    .main-footer .menu { display: flex; flex-flow: wrap; margin: -12px 0; }
+    .main-footer .menu-item { padding: 12px 0; width: 100%; text-align: center; }
+    .copy-right { padding-top: 25px; }
+  }
+</style>

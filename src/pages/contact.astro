@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const faqs = [
+  {
+    q: 'What is TestDynamics and how does it relate to the Satori platform?',
+    a: 'TestDynamics is a leading company specializing in AI-driven solutions for the healthcare industry. Our flagship product, the Satori platform, is an advanced medical imaging AI platform that augments radiologists\' expertise, enhancing diagnostic capabilities and streamlining workflows.',
+  },
+  {
+    q: 'How do I get started with the Satori platform?',
+    a: 'It\'s simple! Just reach out to our team through the contact page. We\'ll guide you through the process, from initial inquiry to full integration of the Satori platform into your medical institutions\' workflow.',
+  },
+  {
+    q: 'Is the Satori platform compatible with all types of radiology equipment?',
+    a: 'Satori is designed to be versatile and can integrate with a wide range of radiology equipment. However, for specific compatibility questions, please contact our support team who can provide detailed information tailored to your setup.',
+  },
+  {
+    q: 'How does TestDynamics ensure the security and privacy of patient data with the Satori platform?',
+    a: 'Patient data security and privacy are our top priorities. The Satori platform utilizes state-of-the-art encryption and security protocols to ensure that all medical images and associated data are stored and transmitted securely. We are compliant with industry standards and regulations.',
+  },
+  {
+    q: 'Can I request a demo or trial of the Satori platform?',
+    a: 'Absolutely! We\'re confident in the capabilities of Satori and are happy to provide a demo or trial to interested parties. Just request a demo through our demo request page, and a representative will be in touch to arrange a suitable time for you.',
+  },
+];
+---
+
+<Layout title="Contact TestDynamics" description="Looking to connect? We'd love to hear from you.">
+
+  <!-- HERO -->
+  <section style="background:#f7f8f9;padding-top:160px;padding-bottom:80px;">
+    <div class="container">
+      <p class="title-tag" style="background:#eef0f3;padding:4px;border-radius:2px;display:inline-block;font-size:12px;margin-bottom:20px;">CONTACT TESTDYNAMICS</p>
+      <h1 style="font-size:60px;font-weight:700;color:#2a3342;margin-bottom:20px;line-height:1.1;">Contact the TestDynamics team and let's talk!</h1>
+      <p style="font-size:20px;color:#556987;max-width:600px;">Looking to connect? We'd love to hear from you. Here are ways you can contact TestDynamics.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section-contact-block" style="background:#f7f8f9;">
+    <div class="container" style="padding-left:36px;padding-right:36px;">
+      <div class="row" style="display:flex;flex-wrap:wrap;gap:40px;min-height:700px;padding:91px 0;">
+
+        <!-- LEFT: info -->
+        <div class="col" style="width:50%;">
+          <h2 style="font-size:60px;font-weight:700;color:#2a3342;line-height:60px;margin-bottom:30px;">Contact form</h2>
+          <p style="font-size:20px;color:#556987;margin-bottom:40px;">What would you like to talk about?</p>
+
+          <!-- Email -->
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:30px;">
+            <img src="https://testdynamics.net/wp-content/themes/testdynamics/assets/images/emblup.svg" alt="Email" style="width:24px;" />
+            <a href="mailto:hello@testdynamics.net" style="font-size:18px;color:#556987;background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">hello@testdynamics.net</a>
+          </div>
+
+          <!-- Side cards -->
+          <div style="display:grid;gap:20px;margin-top:40px;">
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+              <img src="https://testdynamics.net/wp-content/uploads/2023/10/remix-icons1.svg" alt="" style="width:40px;flex-shrink:0;" />
+              <div>
+                <h4 style="font-size:20px;font-weight:700;color:#2a3342;margin-bottom:8px;">Discover our AI Algorithms</h4>
+                <p style="font-size:16px;color:#556987;margin-bottom:10px;">Discover the AI tools that define Satori's arsenal.</p>
+                <a href="/request-demo" class="btn" style="font-size:14px;padding:8px 16px;line-height:1.4;">Request a demo</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+              <img src="https://testdynamics.net/wp-content/uploads/2023/10/remix-icons2.svg" alt="" style="width:40px;flex-shrink:0;" />
+              <div>
+                <h4 style="font-size:20px;font-weight:700;color:#2a3342;margin-bottom:8px;">FAQ</h4>
+                <p style="font-size:16px;color:#556987;">Explore our frequently asked questions.</p>
+                <a href="#faq" style="font-size:14px;color:#4136f1;font-weight:600;">Jump to FAQ →</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+              <img src="https://testdynamics.net/wp-content/uploads/2023/10/remix-icons3.svg" alt="" style="width:40px;flex-shrink:0;" />
+              <div>
+                <h4 style="font-size:20px;font-weight:700;color:#2a3342;margin-bottom:8px;">Want to say Hi in person?</h4>
+                <p style="font-size:16px;color:#556987;">Texas: 12600 Hill Country Blvd<br/>Suite R-275 Bee Cave, TX 78738</p>
+                <a href="https://maps.app.goo.gl/B4XyBptiyh2aTLB96" target="_blank" style="font-size:14px;background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;">See On Maps →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div class="col" style="width:calc(50% - 40px);">
+          <div class="contact-block-form">
+            <form name="contact" method="POST" data-netlify="true" style="padding:40px;background:#fff;border-radius:0.5rem;box-shadow:0px 20px 25px -5px rgba(85,105,135,0.1);">
+              <input type="hidden" name="form-name" value="contact" />
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="form-field">
+                  <label>Name <span style="color:#ff6142;">*</span></label>
+                  <input type="text" name="name" required placeholder="Your name" />
+                </div>
+                <div class="form-field">
+                  <label>Organization <span style="color:#ff6142;">*</span></label>
+                  <input type="text" name="organization" required placeholder="Your organization" />
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="form-field">
+                  <label>Email <span style="color:#ff6142;">*</span></label>
+                  <input type="email" name="email" required placeholder="you@example.com" />
+                </div>
+                <div class="form-field">
+                  <label>Phone number (optional)</label>
+                  <input type="tel" name="phone" placeholder="+1 (555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Subject (optional)</label>
+                <select name="subject">
+                  <option value="">Select a topic</option>
+                  <option>Inquiry</option>
+                  <option>Partnership</option>
+                  <option>Licencing and permissions</option>
+                  <option>Product / Technical support</option>
+                  <option>Job application</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Message <span style="color:#ff6142;">*</span></label>
+                <textarea name="message" rows="5" required placeholder="How can we help you?"></textarea>
+              </div>
+              <p style="font-size:14px;color:#556987;margin-bottom:20px;">We value your privacy. TestDynamics uses your details to get in touch with you.</p>
+              <button type="submit" class="btn" style="width:100%;font-size:18px;">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:#2a3342;position:relative;overflow:hidden;padding:91px 0;">
+    <div style="position:absolute;inset:0;background-image:url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/dots.svg');background-repeat:repeat;z-index:0;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 50% at 50% 50%,rgba(42,51,66,0) 0%,#2a3342 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="text-center" style="margin-bottom:60px;">
+        <p class="title-tag" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);padding:4px;border-radius:2px;display:inline-block;font-size:12px;color:#fff;margin-bottom:20px;">FAQ</p>
+        <h2 style="color:#fff;font-size:60px;font-weight:700;margin-bottom:20px;">Frequently Asked Questions</h2>
+        <p style="color:#8896ab;font-size:20px;max-width:700px;margin:0 auto;">Explore our frequently asked questions to learn more about TestDynamics and the innovative Satori platform.</p>
+      </div>
+
+      <div class="faq-list" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <details>
+              <summary style="font-size:20px;font-weight:700;color:#fff;cursor:pointer;padding:20px 0;border-bottom:1px solid #404f65;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                {faq.q}
+                <span class="faq-icon">+</span>
+              </summary>
+              <p style="font-size:16px;color:#8896ab;padding:20px 0;line-height:1.7;">{faq.a}</p>
+            </details>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaSection
+    title="Would you like to try Satori out?"
+    subtitle="Discover AI's impact on radiology with our cutting-edge Satori platform. Begin your advanced medical imaging journey and contact TestDynamics today."
+    btnLabel="Get a free demo"
+  />
+
+</Layout>
+
+<style>
+  .form-field {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  label {
+    color: #404f65;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+  }
+  input, select, textarea {
+    border: 1px solid #d5dae1;
+    border-radius: 6px;
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    color: #2a3342;
+    transition: border-color 0.2s;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #9281ff;
+  }
+  textarea { height: 140px; resize: vertical; }
+  input::placeholder, textarea::placeholder { color: rgba(0,0,0,0.36); }
+
+  details summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform 0.3s; display: inline-block; font-size: 24px; color: #ff6142; flex-shrink: 0; }
+
+  @media (max-width: 767px) {
+    .row { flex-direction: column; }
+    .row .col { width: 100% !important; }
+    .faq-list { grid-template-columns: 1fr !important; }
+  }
+</style>
