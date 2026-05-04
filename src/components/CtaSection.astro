@@ -14,38 +14,83 @@ const {
 } = Astro.props;
 ---
 
-<section class="cta-block">
-  <div class="container">
-    <div class="cta-inner text-center">
-      <h2>{title}</h2>
-      <p>{subtitle}</p>
-      <a href={btnHref} class="btn">{btnLabel}</a>
+<div class="satori-out-wrapper">
+  <div class="satori-sec">
+    <div class="container">
+      <div class="satori-content-text">
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+        <a href={btnHref} class="demo-btn">{btnLabel}</a>
+      </div>
     </div>
   </div>
-</section>
+
+  <div class="wave-section">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 115.5" preserveAspectRatio="none">
+      <path fill="#2a3342" d="M1127.8,43.1c0,0-247.8,49.3-407.8,46.4c-160,2.9-407.8-46.4-407.8-46.4C142.9,8.3,0.7-0.7,0,0v115.4h720h720V0 C1439.3-0.7,1297.1,8.3,1127.8,43.1z"/>
+    </svg>
+  </div>
+</div>
 
 <style>
-  .cta-block {
-    padding: 91px 0;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(247,248,249,0) 0%, #f7f8f9 100%);
+  .satori-out-wrapper {
+    position: relative;
+    background: linear-gradient(90deg, #4136f1 -0.68%, #4136f1 -0.67%, #8743ff 100.7%, #8743ff 100.7%);
+    overflow: hidden;
   }
 
-  .cta-inner { max-width: 800px; margin: 0 auto; }
+  .satori-sec {
+    padding: 91px 0 130px;
+  }
 
-  .text-center { text-align: center; }
+  .satori-content-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
   h2 {
     font-size: 60px;
     font-weight: 700;
-    color: #2a3342;
+    color: #fff;
     margin-bottom: 20px;
     line-height: 1;
   }
 
   p {
     font-size: 20px;
-    color: #556987;
+    color: rgba(255,255,255,0.8);
     margin-bottom: 30px;
+  }
+
+  .demo-btn {
+    display: inline-block;
+    background: #fff;
+    color: #4136f1;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 0.5rem;
+    line-height: 29px;
+    transition: all 0.3s;
+  }
+
+  .demo-btn:hover {
+    background: rgba(255,255,255,0.9);
+  }
+
+  .wave-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+  }
+
+  .wave-section svg {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   @media (max-width: 992px) { h2 { font-size: 48px; } }

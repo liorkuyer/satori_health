@@ -9,13 +9,6 @@ const stats = [
   { number: 'Limited', label: 'Access to AI', desc: 'The access and ability for hospitals to choose the AI algorithms' },
 ];
 
-const features = [
-  'Seamless integration between AI Developers and Healthcare Providers',
-  'A wide range of third party AI algorithms at your command',
-  { text: 'A vendor-neutral, AI-powered medical imaging platform designed to streamline automated workflows.', link: { href: '/platform', label: 'AI-powered medical imaging platform' } },
-  'User experience-driven interface',
-];
-
 const testimonials = [
   {
     img: 'https://testdynamics.net/wp-content/uploads/2023/01/Suja-Chandrasekaran.png',
@@ -37,73 +30,82 @@ const testimonials = [
   <!-- ══════════════════════════════════════
        HERO
   ══════════════════════════════════════ -->
-  <section class="home-header-wrapper">
-    <!-- Background -->
-    <div class="header_background-image-wrapper">
+  <section class="home-header-wrapper padding-section-large">
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="max-width-1040">
+            <div class="text-center hero-inner-content">
+              <h1 class="sub-title">We make <span class="gradient-text">AI work</span> for healthcare</h1>
+              <p class="description">Turning clinical information and innovations into practical decision-making assets</p>
+              <div class="button-group is-center">
+                <a href="/request-demo" class="btn">Request Demo</a>
+                <a href="/platform" class="btn border-btn">Discover Satori</a>
+              </div>
+              <div class="onclick-down">
+                <div class="box">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_background-image-wrapper" style="background-image:url(https://testdynamics.net/wp-content/uploads/2024/11/marc-olivier-jodoin-eiMzJl3xj4o-unsplash-scaled.jpg)">
       <div class="image-overlay-layer"></div>
       <img
-        src="https://testdynamics.net/wp-content/themes/testdynamics/assets/images/header-bg2.png"
+        src="https://testdynamics.net/wp-content/themes/testdynamics/assets/images/headerbg.png"
         alt=""
         class="header_background-image"
       />
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p class="title-tag bg-txt">AI Healthcare Solutions</p>
-          <h1 class="sub-title">We make <span class="gradient-text">AI work</span> for healthcare</h1>
-          <p class="description">Turning clinical information and innovations into practical decision-making assets</p>
-          <div class="button-group">
-            <a href="/request-demo" class="btn">Request Demo</a>
-            <a href="/platform" class="btn border-btn">Discover Satori</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom wave mask -->
-    <div class="wave-mask"></div>
-
-    <!-- Scroll indicator -->
-    <div class="onclick-down">
-      <div class="box">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
   </section>
 
   <!-- ══════════════════════════════════════
        THE CHALLENGE / STATS
   ══════════════════════════════════════ -->
-  <section class="section-current-situation-wrapper padding-section-large">
+  <section class="section-current-situation-wrapper padding-section-medium">
     <div class="container">
-      <div class="row current-wrapper">
 
-        <!-- Left: text + stats -->
+      <!-- Title + description -->
+      <div class="row">
         <div class="col">
           <div class="max-width-768">
-            <p class="title-tag bg-txt" style="background:#eef0f3;padding:4px;display:inline-block;border-radius:2px;margin-bottom:20px;">THE CHALLENGE</p>
-            <h2 class="sub-title" style="color:#2a3342;margin-bottom:20px;">Bringing AI and healthcare closer together</h2>
-            <p class="sub-description" style="font-size:20px;">
+            <p class="title-tag bg-txt challenge-tag">
+              <span class="gradient-text">THE CHALLENGE</span>
+            </p>
+            <h2 class="sub-title challenge-title">
+              Bringing <span class="gradient-text">AI and healthcare</span> closer together
+            </h2>
+            <p class="sub-description">
               Healthcare providers see an exponential explosion in the complexity and the number of CT, MRI and X-Ray imaging studies, which creates an ever increasing backlog and pressure on specialist radiologists. Prioritizing the most severe cases, reducing errors and increasing productivity and capacity is an enormous challenge which AI can solve.
             </p>
           </div>
-          <div class="section-current-inner" style="margin-top:45px;">
+        </div>
+      </div>
+
+      <!-- Stats + Image -->
+      <div class="row current-wrapper">
+        <div class="col">
+          <div class="section-current-inner">
             {stats.map(stat => (
               <div class="sesction-current-items">
-                <h3 class="sub-title gradient-text" style="font-size:60px;margin-bottom:8px;">{stat.number}</h3>
-                <p style="font-size:20px;font-weight:700;color:#2a3342;margin-bottom:4px;">{stat.label}</p>
-                <p class="count-content" style="font-size:16px;color:#556987;">{stat.desc}</p>
+                <div class="text-center">
+                  <h3 class="stat-number">{stat.number}</h3>
+                  <p class="stat-label">{stat.label}</p>
+                  <span class="count-content">{stat.desc}</span>
+                </div>
               </div>
             ))}
           </div>
         </div>
-
-        <!-- Right: image -->
         <div class="col">
           <div class="section-current-img">
             <img
@@ -112,94 +114,111 @@ const testimonials = [
             />
           </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
   <!-- ══════════════════════════════════════
        MEET SATORI
   ══════════════════════════════════════ -->
-  <section class="section-meet-satori padding-section-large" style="position:relative;overflow:hidden;">
-    <!-- Dark bg with overlay -->
-    <div class="header_background-image-wrapper">
-      <div class="image-overlay-layer" style="background-color:rgba(42,51,66,0.6);"></div>
-    </div>
+  <section class="section-meet-satori padding-section-large">
 
-    <!-- Top wave -->
-    <div class="wave-sectiontop">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,60 C360,0 1080,0 1440,60 L1440,0 L0,0 Z" fill="#f7f8f9"/>
-      </svg>
-    </div>
+    <div class="container">
+      <div class="row satori-row">
 
-    <div class="container" style="position:relative;z-index:3;">
-      <p class="title-tag" style="color:#fff;background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);padding:4px;border-radius:2px;display:inline-block;margin-bottom:20px;">MEET SATORI</p>
-      <div class="row" style="display:flex;flex-wrap:wrap;align-items:center;gap:35px;margin-top:0;margin-bottom:80px;">
-        <div class="col" style="width:50%;">
+        <div class="col satori-col-content">
           <div class="satori-content">
-            <h2 class="sub-title" style="color:#fff;margin-bottom:30px;">Meet Satori: Your masterkey for the <span class="gradient-text">AI world</span></h2>
+            <p class="title-tag bg-txt satori-tag">MEET SATORI</p>
+            <h2 class="sub-title satori-title">
+              Meet Satori: <br/>Your <span class="gradient-text-blue">masterkey</span> for the AI world
+            </h2>
             <div class="meet-satori-list">
               <ul class="list-items">
                 <li>Seamless integration between AI Developers and Healthcare Providers</li>
                 <li>A wide range of third party AI algorithms at your command</li>
-                <li>A vendor-neutral, <a href="/platform" style="background:linear-gradient(270deg,#9281ff 0%,#fe3e70 52.55%,#ff6142 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:400;">AI-powered medical imaging platform</a> designed to streamline automated workflows.</li>
+                <li>A vendor-neutral, <a href="/platform" class="satori-link">AI-powered medical imaging platform</a> designed to streamline automated workflows.</li>
                 <li>User experience-driven interface</li>
               </ul>
             </div>
-            <div style="margin-top:40px;">
+            <div class="satori-cta">
               <a href="/platform" class="btn">Discover Satori</a>
             </div>
           </div>
         </div>
-        <div class="col" style="width:50%;">
-          <div class="satori-img-box" style="max-width:570px;margin-left:auto;">
+
+        <div class="col satori-col-img">
+          <div class="satori-img-box">
             <img
               src="https://testdynamics.net/wp-content/uploads/2023/07/Satori-from-TestDynamics-1.png"
               alt="Satori AI healthcare solutions"
-              style="width:100%;object-fit:contain;"
             />
           </div>
         </div>
+
       </div>
+    </div>
+
+    <!-- Background -->
+    <div class="header_background-image-wrapper">
+      <div class="image-overlay-layer"></div>
+      <img
+        src="https://testdynamics.net/wp-content/themes/testdynamics/assets/images/headerbg.png"
+        alt=""
+        class="header_background-image"
+      />
+    </div>
+
+    <!-- Top wave -->
+    <div class="wave-sectiontop">
+      <svg width="1440" height="127" preserveAspectRatio="none" viewBox="0 0 1440 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1440" height="125.908" transform="translate(0 1)" fill="#232934"/>
+        <path d="M804.997 44.1468L720 57.7916L682.561 64.8755C469.411 105.206 250.589 105.206 37.4386 64.8755L0 57.7916V0H1440V57.7916L1355 44.1468C1172.83 14.9028 987.166 14.9028 804.997 44.1468Z" fill="#ffffff"/>
+      </svg>
     </div>
 
     <!-- Bottom wave -->
     <div class="wave-section">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:-2px;left:0;width:100%;">
-        <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#f7f8f9"/>
+      <svg width="1440" height="127" preserveAspectRatio="none" viewBox="0 0 1440 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1440" height="125.908" transform="translate(0 1)" fill="white"/>
+        <path d="M804.997 44.1468L720 57.7916L682.561 64.8755C469.411 105.206 250.589 105.206 37.4386 64.8755L0 57.7916V0H1440V57.7916L1355 44.1468C1172.83 14.9028 987.166 14.9028 804.997 44.1468Z" fill="#232934"/>
       </svg>
     </div>
+
   </section>
 
   <!-- ══════════════════════════════════════
        TESTIMONIALS
   ══════════════════════════════════════ -->
-  <section class="section-testimonial padding-section-large" style="background:radial-gradient(50% 50% at 50% 50%,rgba(247,248,249,0) 0%,#f7f8f9 100%);">
+  <section class="section-testimonial padding-section-small">
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="max-width-944" style="max-width:944px;margin:0 auto;">
-            {testimonials.map(t => (
-              <div class="testimonial-wrapper">
-                <div class="testimonial-inner item1">
-                  <div class="testimonial-img-box">
-                    <div class="img-box">
-                      <img src={t.img} alt={t.name} style="width:85px;height:85px;border-radius:50%;object-fit:cover;" />
+          <div class="max-width-944">
+            <div class="testimonial-slider">
+              {testimonials.map(t => (
+                <div class="testimonial-items">
+                  <div class="testimonial-wrapper">
+                    <div class="testimonial-inner item1">
+                      <div class="testimonial-img-box">
+                        <div class="img-box">
+                          <img src={t.img} alt={t.name} />
+                        </div>
+                        <div class="content">
+                          <p class="card-small-title">{t.name}</p>
+                          <span>{t.title}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="content">
-                      <h5 class="extra-small-title" style="font-size:24px;color:#2a3342;font-weight:700;">{t.name}</h5>
-                      <span style="font-size:18px;color:#556987;display:block;padding-top:8px;">{t.title}</span>
+                    <div class="testimonial-inner item2">
+                      <div class="testi-content-inner">
+                        <p class="extra-small-title">{t.quote}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="testi-content-inner">
-                    <h5 class="extra-small-title" style="font-size:24px;font-weight:700;color:#2a3342;line-height:1.4;">
-                      {t.quote}
-                    </h5>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -212,6 +231,12 @@ const testimonials = [
 </Layout>
 
 <style>
+  /* ── UTILITY ── */
+  .text-center { text-align: center; }
+  .is-center { justify-content: center; }
+  .max-width-1040 { max-width: 1040px; margin: 0 auto; }
+  .max-width-768 { max-width: 768px; }
+
   /* ── HERO ── */
   .home-header-wrapper {
     position: relative;
@@ -221,11 +246,53 @@ const testimonials = [
     overflow: hidden;
   }
 
+  .home-header-wrapper .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .home-header-wrapper .row {
+    display: flex;
+  }
+
+  .home-header-wrapper .col {
+    width: 100%;
+  }
+
+  .hero-inner-content {
+    padding: 80px 0 60px;
+  }
+
+  .home-header-wrapper .sub-title {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
+  .home-header-wrapper .description {
+    font-size: 20px;
+    color: #bbc3cf;
+    margin-bottom: 35px;
+  }
+
+  .home-header-wrapper .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  /* Hero background layers */
   .header_background-image-wrapper {
     position: absolute;
     left: 0; top: 0; right: 0; bottom: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    z-index: 0;
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/header-bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .image-overlay-layer {
@@ -243,60 +310,10 @@ const testimonials = [
     z-index: 2;
   }
 
-  .home-header-wrapper .container { position: relative; z-index: 10; }
-
-  .home-header-wrapper .row .col {
-    margin-top: 50px;
-    margin-bottom: 120px;
-  }
-
-  .sub-title {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1;
-    color: #2a3342;
-  }
-
-  .home-header-wrapper .sub-title {
-    color: #fff !important;
-    font-size: 60px !important;
-    margin-bottom: 25px;
-  }
-
-  .home-header-wrapper .description {
-    font-size: 20px;
-    color: #bbc3cf;
-    margin-bottom: 35px;
-  }
-
-  .button-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
-  }
-
-  /* Wave mask at bottom of hero */
-  .wave-mask {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 168px;
-    position: absolute;
-    z-index: 90;
-    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/mask.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
   /* Scroll indicator */
   .onclick-down {
-    position: absolute;
-    bottom: 110px;
-    left: 50%;
-    z-index: 99;
-    transform: translate(-50%, 0);
+    display: inline-block;
+    margin-top: 20px;
   }
 
   .onclick-down .box { cursor: pointer; }
@@ -323,74 +340,246 @@ const testimonials = [
   }
 
   @keyframes animate {
-    0% { transform: translateY(20%) rotate(45deg); opacity: 1; }
-    50% { transform: translateY(0%) rotate(45deg); opacity: 1; }
+    0%   { transform: translateY(20%) rotate(45deg); opacity: 1; }
+    50%  { transform: translateY(0%)  rotate(45deg); opacity: 1; }
     100% { transform: translateY(20%) rotate(45deg); opacity: 1; }
   }
 
-  /* ── STATS ── */
+  /* ── THE CHALLENGE ── */
+  .challenge-tag {
+    background: #eef0f3;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  .challenge-title {
+    color: #2a3342;
+    margin-bottom: 20px;
+  }
+
+  .sub-description {
+    font-size: 20px;
+    color: #556987;
+    margin-bottom: 0;
+  }
+
   .current-wrapper {
     display: flex;
     align-items: center;
     gap: 45px;
     flex-wrap: wrap;
+    margin-top: 45px;
   }
-  .current-wrapper .col { width: 50%; }
+  .current-wrapper > .col { width: calc(50% - 23px); }
+
   .section-current-inner {
     display: flex;
     flex-wrap: wrap;
     gap: 45px 30px;
   }
-  .sesction-current-items { width: calc(50% - 15px); flex-grow: 1; }
+  .sesction-current-items {
+    width: calc(50% - 15px);
+    flex-grow: 1;
+  }
+
+  .stat-number {
+    font-size: 60px;
+    font-weight: 700;
+    color: #2a3342;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2a3342;
+    margin-bottom: 4px;
+  }
+
+  .count-content {
+    font-size: 16px;
+    color: #556987;
+    display: block;
+  }
+
   .section-current-img {
     width: 100%;
-    padding-left: 100px;
+    padding-left: 30px;
   }
   .section-current-img img {
     border-radius: 6px;
     width: 100%;
     object-fit: cover;
-    object-position: center;
   }
 
   /* ── MEET SATORI ── */
   .section-meet-satori {
-    background-color: #2a3342;
+    position: relative;
+    overflow: hidden;
+    background-color: #232934;
   }
+
   .section-meet-satori .header_background-image-wrapper {
-    position: absolute;
-    inset: 0;
     z-index: 0;
   }
+
+  .section-meet-satori .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .satori-tag {
+    background: linear-gradient(90deg, #4136f1 -0.68%, #4136f1 -0.67%, #8743ff 100.7%, #8743ff 100.7%);
+    padding: 4px;
+    line-height: 1;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .satori-title {
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.1;
+  }
+
+  .satori-link {
+    background: linear-gradient(90deg, #4136f1 -0.68%, #4136f1 -0.67%, #8743ff 100.7%, #8743ff 100.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+  }
+
+  .satori-cta {
+    margin-top: 40px;
+  }
+
+  .satori-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .satori-col-content {
+    width: calc(50% - 18px);
+  }
+
+  .satori-col-img {
+    width: calc(50% - 18px);
+  }
+
+  .satori-img-box {
+    max-width: 570px;
+    margin-left: auto;
+  }
+  .satori-img-box img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* Top wave */
   .wave-sectiontop {
     position: absolute;
-    top: -30px;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 5;
+    line-height: 0;
   }
-  .wave-sectiontop svg { width: 100%; height: auto; }
+  .wave-sectiontop svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-  .section-meet-satori .row .col { width: calc(50% - 18px); }
+  /* Bottom wave */
+  .wave-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+    line-height: 0;
+  }
+  .wave-section svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /* ── TESTIMONIALS ── */
-  .testimonial-wrapper {
+  .section-testimonial {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(247,248,249,0) 0%, #f7f8f9 100%);
+  }
+
+  .max-width-944 {
+    max-width: 944px;
+    margin: 0 auto;
+  }
+
+  .testimonial-items {
     margin-bottom: 60px;
+  }
+  .testimonial-items:last-child { margin-bottom: 0; }
+
+  .testimonial-wrapper {
     display: grid;
     align-items: center;
     gap: 50px;
     grid-template-columns: 1fr 2fr;
   }
-  .testimonial-wrapper:last-child { margin-bottom: 0; }
 
   .testimonial-img-box {
     display: flex;
     gap: 30px;
     align-items: center;
   }
-  .img-box { width: 85px; height: 85px; border-radius: 50px; overflow: hidden; flex-shrink: 0; }
-  .content { width: calc(100% - 110px); }
+
+  .img-box {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content { width: calc(100% - 115px); }
+
+  .card-small-title {
+    font-size: 24px;
+    color: #2a3342;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .content > span {
+    font-size: 18px;
+    color: #556987;
+    display: block;
+    padding-top: 8px;
+  }
+
+  .extra-small-title {
+    font-size: 24px;
+    color: #2a3342;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
 
   .testi-content-inner {
     padding: 26px 50px 10px 60px;
@@ -411,24 +600,25 @@ const testimonials = [
     background-repeat: no-repeat;
   }
 
-  /* Responsive */
+  /* ── RESPONSIVE ── */
   @media (max-width: 991px) {
     .current-wrapper { flex-direction: column-reverse; }
-    .current-wrapper .col { width: 100%; }
+    .current-wrapper > .col { width: 100%; }
     .section-current-img { padding-left: 0; max-height: 360px; }
-    .section-meet-satori .row .col { width: 100%; }
+    .satori-col-content, .satori-col-img { width: 100%; }
+    .satori-img-box { margin-left: 0; }
     .testimonial-wrapper { grid-template-columns: 1fr; gap: 30px; }
     .testi-content-inner { padding: 50px 35px; }
   }
+
   @media (max-width: 767px) {
-    .home-header-wrapper .sub-title { font-size: 36px !important; }
-    .home-header-wrapper .row .col { margin-bottom: 50px; }
-    .wave-mask { height: 75px; bottom: -3px; }
-    .onclick-down { bottom: 20px; }
+    .home-header-wrapper .sub-title { font-size: 36px; }
+    .hero-inner-content { padding: 60px 0 40px; }
     .section-current-inner { gap: 24px 20px; }
     .sesction-current-items { width: calc(50% - 10px); }
   }
+
   @media (max-width: 480px) {
-    .wave-mask { height: 55px; }
+    .satori-col-content, .satori-col-img { width: 100%; }
   }
 </style>
