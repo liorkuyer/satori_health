@@ -32,13 +32,17 @@ const testimonials = [
   ══════════════════════════════════════ -->
   <section class="home-header-wrapper padding-section-large">
 
-    <div class="container">
+    <div class="container hero-container">
       <div class="row">
         <div class="col">
           <div class="max-width-1040">
-            <div class="text-center hero-inner-content">
-              <h1 class="sub-title">We make <span class="gradient-text">AI work</span> for healthcare</h1>
-              <p class="description">Turning clinical information and innovations into practical decision-making assets</p>
+            <div class="text-center margin-xxlarge margin-top">
+              <h1 class="sub-title text-white xmargin-medium margin-bottom">
+                We make <span class="red-txt">AI work</span> for healthcare
+              </h1>
+              <p class="description text-grey xmargin-medium margin-bottom">
+                Turning clinical information and innovations into practical decision-making assets
+              </p>
               <div class="button-group is-center">
                 <a href="/request-demo" class="btn">Request Demo</a>
                 <a href="/platform" class="btn border-btn">Discover Satori</a>
@@ -49,7 +53,6 @@ const testimonials = [
       </div>
     </div>
 
-    <!-- Scroll indicator over the wave curve -->
     <div class="onclick-down">
       <div class="box">
         <span></span>
@@ -71,37 +74,37 @@ const testimonials = [
   </section>
 
   <!-- ══════════════════════════════════════
-       THE CHALLENGE / STATS
+       THE CHALLENGE
   ══════════════════════════════════════ -->
   <section class="section-current-situation-wrapper padding-section-medium">
     <div class="container">
 
-      <!-- Title + description -->
       <div class="row">
         <div class="col">
           <div class="max-width-768">
-            <p class="title-tag bg-txt challenge-tag">
-              <span class="gradient-text">THE CHALLENGE</span>
-            </p>
-            <h2 class="sub-title challenge-title">
-              Bringing <span class="gradient-text">AI and healthcare</span> closer together
-            </h2>
-            <p class="sub-description">
-              Healthcare providers see an exponential explosion in the complexity and the number of CT, MRI and X-Ray imaging studies, which creates an ever increasing backlog and pressure on specialist radiologists. Prioritizing the most severe cases, reducing errors and increasing productivity and capacity is an enormous challenge which AI can solve.
-            </p>
+            <div class="content margin-medium margin-bottom">
+              <p class="bg-txt grey-bg margin-small margin-bottom">
+                <span class="red-txt">THE CHALLENGE</span>
+              </p>
+              <h2 class="title margin-small margin-bottom">
+                Bringing <span class="red-txt">AI and healthcare</span> closer together
+              </h2>
+              <p class="medium-text sub-description xmargin-medium margin-bottom">
+                Healthcare providers see an exponential explosion in the complexity and the number of CT, MRI and X-Ray imaging studies, which creates an ever increasing backlog and pressure on specialist radiologists. Prioritizing the most severe cases, reducing errors and increasing productivity and capacity is an enormous challenge which AI can solve.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Stats + Image -->
       <div class="row current-wrapper">
         <div class="col">
           <div class="section-current-inner">
             {stats.map(stat => (
               <div class="sesction-current-items">
                 <div class="text-center">
-                  <h3 class="stat-number">{stat.number}</h3>
-                  <p class="stat-label">{stat.label}</p>
+                  <h3 class="margin-xsmall margin-bottom">{stat.number}</h3>
+                  <p class="margin-xsmall margin-bottom font-weight-bold">{stat.label}</p>
                   <span class="count-content">{stat.desc}</span>
                 </div>
               </div>
@@ -126,16 +129,16 @@ const testimonials = [
   ══════════════════════════════════════ -->
   <section class="section-meet-satori padding-section-large">
 
-    <div class="container">
+    <div class="container satori-container">
       <div class="row satori-row">
 
         <div class="col satori-col-content">
           <div class="satori-content">
-            <p class="title-tag bg-txt satori-tag">MEET SATORI</p>
-            <h2 class="sub-title satori-title">
-              Meet Satori: <br/>Your <span class="gradient-text-blue">masterkey</span> for the AI world
+            <p class="bg-txt blue-bg margin-small margin-bottom">MEET SATORI</p>
+            <h2 class="title xmargin-medium margin-bottom text-white">
+              Meet Satori: <br/>Your <span class="blue-txt">masterkey</span> for the AI world
             </h2>
-            <div class="meet-satori-list">
+            <div class="meet-satori-list margin-medium margin-bottom">
               <ul class="list-items">
                 <li>Seamless integration between AI Developers and Healthcare Providers</li>
                 <li>A wide range of third party AI algorithms at your command</li>
@@ -143,9 +146,7 @@ const testimonials = [
                 <li>User experience-driven interface</li>
               </ul>
             </div>
-            <div class="satori-cta">
-              <a href="/platform" class="btn">Discover Satori</a>
-            </div>
+            <a href="/platform" class="btn">Discover Satori</a>
           </div>
         </div>
 
@@ -161,7 +162,6 @@ const testimonials = [
       </div>
     </div>
 
-    <!-- Background -->
     <div class="header_background-image-wrapper">
       <div class="image-overlay-layer"></div>
       <img
@@ -171,7 +171,6 @@ const testimonials = [
       />
     </div>
 
-    <!-- Top wave -->
     <div class="wave-sectiontop">
       <svg width="1440" height="127" preserveAspectRatio="none" viewBox="0 0 1440 127" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="1440" height="125.908" transform="translate(0 1)" fill="#232934"/>
@@ -179,7 +178,6 @@ const testimonials = [
       </svg>
     </div>
 
-    <!-- Bottom wave -->
     <div class="wave-section">
       <svg width="1440" height="127" preserveAspectRatio="none" viewBox="0 0 1440 127" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="1440" height="125.908" transform="translate(0 1)" fill="white"/>
@@ -199,30 +197,30 @@ const testimonials = [
           <div class="max-width-944">
             <div class="testimonial-slider" id="testimonial-slider">
               <div class="slider-track-outer">
-              <div class="slider-track" id="slider-track">
-                {testimonials.map(t => (
-                  <div class="testimonial-items">
-                    <div class="testimonial-wrapper">
-                      <div class="testimonial-inner item1">
-                        <div class="testimonial-img-box">
-                          <div class="img-box">
-                            <img src={t.img} alt={t.name} />
-                          </div>
-                          <div class="content">
-                            <p class="card-small-title">{t.name}</p>
-                            <span>{t.title}</span>
+                <div class="slider-track" id="slider-track">
+                  {testimonials.map(t => (
+                    <div class="testimonial-items">
+                      <div class="testimonial-wrapper">
+                        <div class="testimonial-inner item1">
+                          <div class="testimonial-img-box">
+                            <div class="img-box">
+                              <img src={t.img} alt={t.name} />
+                            </div>
+                            <div class="testi-person">
+                              <p class="card-small-title">{t.name}</p>
+                              <span class="testi-role">{t.title}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="testimonial-inner item2">
-                        <div class="testi-content-inner">
-                          <p class="extra-small-title">{t.quote}</p>
+                        <div class="testimonial-inner item2">
+                          <div class="testi-content-inner">
+                            <p class="extra-small-title">{t.quote}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
               </div>
               <button class="slick-arrow slick-prev" id="testi-prev" aria-label="Previous">
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -246,19 +244,14 @@ const testimonials = [
     </div>
   </section>
 
-  <!-- CTA -->
   <CtaSection />
 
 </Layout>
 
 <style>
-  /* ── UTILITY ── */
-  .text-center { text-align: center; }
-  .is-center { justify-content: center; }
-  .max-width-1040 { max-width: 1040px; margin: 0 auto; }
-  .max-width-768 { max-width: 768px; }
-
-  /* ── HERO ── */
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
   .home-header-wrapper {
     position: relative;
     min-height: 100vh;
@@ -267,27 +260,11 @@ const testimonials = [
     overflow: hidden;
   }
 
-  .home-header-wrapper .container {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-  }
-
-  .home-header-wrapper .row {
-    display: flex;
-  }
-
-  .home-header-wrapper .col {
-    width: 100%;
-  }
-
-  /* Bottom curve / wave via mask.png */
+  /* Bottom wave curve */
   .home-header-wrapper::after {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 168px;
+    bottom: 0; left: 0;
+    width: 100%; height: 168px;
     content: "";
     z-index: 90;
     background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/mask.png');
@@ -296,65 +273,20 @@ const testimonials = [
     background-repeat: no-repeat;
   }
 
-  .hero-inner-content {
-    padding: 80px 0 180px;
+  .hero-container {
+    position: relative;
+    z-index: 99;
+    width: 100%;
   }
 
-  .home-header-wrapper .sub-title {
-    color: #fff;
-    font-size: 60px;
-    margin-bottom: 25px;
-  }
-
-  .home-header-wrapper .description {
-    font-size: 20px;
-    color: #bbc3cf;
-    margin-bottom: 35px;
-  }
-
-  .home-header-wrapper .button-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 35px;
-  }
-
-  /* Hero background layers */
-  .header_background-image-wrapper {
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    z-index: 0;
-    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/header-bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .image-overlay-layer {
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    z-index: 1;
-    background-color: rgba(42, 51, 66, 0.92);
-  }
-
-  .header_background-image {
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: 2;
-  }
-
-  /* Scroll indicator — absolutely positioned over the wave */
-  .home-header-wrapper .onclick-down {
+  /* Scroll arrow — sits over the wave */
+  .onclick-down {
     position: absolute;
     bottom: 110px;
     left: 50%;
     z-index: 99;
     transform: translate(-50%, 0);
   }
-
   .onclick-down .box { cursor: pointer; }
   .onclick-down .box span {
     display: block;
@@ -377,34 +309,47 @@ const testimonials = [
     background-image: none;
     margin: -7px auto;
   }
-
   @keyframes animate {
     0%   { transform: translateY(20%) rotate(45deg); opacity: 1; }
     50%  { transform: translateY(0%)  rotate(45deg); opacity: 1; }
     100% { transform: translateY(20%) rotate(45deg); opacity: 1; }
   }
 
-  /* ── THE CHALLENGE ── */
-  .challenge-tag {
-    background: #eef0f3;
-    padding: 4px;
-    display: inline-block;
-    border-radius: 2px;
-    margin-bottom: 20px;
-    line-height: 1;
+  /* Background layers */
+  .header_background-image-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/header-bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .image-overlay-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(42, 51, 66, 0.92);
+  }
+  .header_background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 2;
   }
 
-  .challenge-title {
-    color: #2a3342;
-    margin-bottom: 20px;
+  @media (max-width: 767px) {
+    .home-header-wrapper::after { height: 75px; }
+    .onclick-down { bottom: 20px; }
+  }
+  @media (max-width: 480px) {
+    .home-header-wrapper::after { height: 55px; }
   }
 
-  .sub-description {
-    font-size: 20px;
-    color: #556987;
-    margin-bottom: 0;
-  }
-
+  /* ══════════════════════════════════════
+     THE CHALLENGE
+  ══════════════════════════════════════ */
   .current-wrapper {
     display: flex;
     align-items: center;
@@ -419,84 +364,34 @@ const testimonials = [
     flex-wrap: wrap;
     gap: 45px 30px;
   }
-  .sesction-current-items {
-    width: calc(50% - 15px);
-    flex-grow: 1;
+  .sesction-current-items { width: calc(50% - 15px); flex-grow: 1; }
+
+  .section-current-img { width: 100%; padding-left: 30px; }
+  .section-current-img img { border-radius: 6px; width: 100%; object-fit: cover; }
+
+  @media (max-width: 991px) {
+    .current-wrapper { flex-direction: column-reverse; }
+    .current-wrapper > .col { width: 100%; }
+    .section-current-img { padding-left: 0; height: 360px; overflow: hidden; }
+    .section-current-img img { height: 100%; width: 100%; object-fit: cover; }
+  }
+  @media (max-width: 767px) {
+    .section-current-inner { gap: 24px 20px; }
+    .sesction-current-items { width: calc(50% - 10px); }
   }
 
-  .stat-number {
-    font-size: 60px;
-    font-weight: 700;
-    color: #2a3342;
-    margin-bottom: 8px;
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2a3342;
-    margin-bottom: 4px;
-  }
-
-  .count-content {
-    font-size: 16px;
-    color: #556987;
-    display: block;
-  }
-
-  .section-current-img {
-    width: 100%;
-    padding-left: 30px;
-  }
-  .section-current-img img {
-    border-radius: 6px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  /* ── MEET SATORI ── */
+  /* ══════════════════════════════════════
+     MEET SATORI
+  ══════════════════════════════════════ */
   .section-meet-satori {
     position: relative;
     overflow: hidden;
     background-color: #232934;
   }
 
-  .section-meet-satori .header_background-image-wrapper {
-    z-index: 0;
-  }
-
-  .section-meet-satori .container {
+  .satori-container {
     position: relative;
     z-index: 3;
-  }
-
-  .satori-tag {
-    background: linear-gradient(90deg, #4136f1 -0.68%, #4136f1 -0.67%, #8743ff 100.7%, #8743ff 100.7%);
-    padding: 4px;
-    line-height: 1;
-    border-radius: 2px;
-    display: inline-block;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-
-  .satori-title {
-    color: #fff;
-    margin-bottom: 30px;
-    line-height: 1.1;
-  }
-
-  .satori-link {
-    background: linear-gradient(90deg, #4136f1 -0.68%, #4136f1 -0.67%, #8743ff 100.7%, #8743ff 100.7%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 400;
-  }
-
-  .satori-cta {
-    margin-top: 40px;
   }
 
   .satori-row {
@@ -505,74 +400,55 @@ const testimonials = [
     align-items: center;
     gap: 35px;
   }
+  .satori-col-content { width: calc(50% - 18px); }
+  .satori-col-img     { width: calc(50% - 18px); }
 
-  .satori-col-content {
-    width: calc(50% - 18px);
+  .satori-link {
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .satori-col-img {
-    width: calc(50% - 18px);
-  }
+  .satori-img-box { max-width: 570px; margin-left: auto; }
+  .satori-img-box img { width: 100%; object-fit: contain; }
 
-  .satori-img-box {
-    max-width: 570px;
-    margin-left: auto;
-  }
-  .satori-img-box img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  /* Top wave */
+  /* Waves */
   .wave-sectiontop {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     width: 100%;
     z-index: 5;
     line-height: 0;
   }
-  .wave-sectiontop svg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Bottom wave */
   .wave-section {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     width: 100%;
     z-index: 5;
     line-height: 0;
   }
-  .wave-section svg {
-    width: 100%;
-    height: auto;
-    display: block;
+  .wave-sectiontop svg,
+  .wave-section svg { width: 100%; height: auto; display: block; }
+
+  .section-meet-satori .header_background-image-wrapper { z-index: 0; }
+
+  @media (max-width: 991px) {
+    .satori-col-content, .satori-col-img { width: 100%; }
+    .satori-img-box { margin-left: 0; }
   }
 
-  /* ── TESTIMONIALS ── */
+  /* ══════════════════════════════════════
+     TESTIMONIALS
+  ══════════════════════════════════════ */
   .section-testimonial {
     background: radial-gradient(50% 50% at 50% 50%, rgba(247,248,249,0) 0%, #f7f8f9 100%);
   }
 
-  .max-width-944 {
-    max-width: 944px;
-    margin: 0 auto;
-  }
-
   /* Slider */
-  .testimonial-slider {
-    position: relative;
-  }
+  .testimonial-slider { position: relative; }
 
-  .slider-track-outer {
-    overflow: hidden;
-  }
+  .slider-track-outer { overflow: hidden; }
 
   .slider-track {
     display: flex;
@@ -580,10 +456,7 @@ const testimonials = [
     will-change: transform;
   }
 
-  .testimonial-items {
-    min-width: 100%;
-    flex-shrink: 0;
-  }
+  .testimonial-items { min-width: 100%; flex-shrink: 0; }
 
   .testimonial-wrapper {
     display: grid;
@@ -593,13 +466,52 @@ const testimonials = [
     padding-bottom: 70px;
   }
 
+  .testimonial-img-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .img-box {
+    width: 85px; height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+  .testi-person { width: calc(100% - 115px); }
+
+  .testi-role {
+    font-size: 18px;
+    color: #556987;
+    display: block;
+    padding-top: 8px;
+  }
+
+  .testi-content-inner {
+    padding: 26px 50px 10px 60px;
+    position: relative;
+  }
+  .testi-content-inner::before {
+    position: absolute; inset: 0; content: "";
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/topquit.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+  .testi-content-inner::after {
+    position: absolute; inset: 0; content: "";
+    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/bottom-quit.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
   /* Arrows */
   .slick-arrow {
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
+    width: 48px; height: 48px;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
@@ -612,9 +524,8 @@ const testimonials = [
     transition: box-shadow 0.3s;
   }
   .slick-arrow:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-
   .slick-prev { right: calc(100% + 20px); }
-  .slick-next { left: calc(100% + 20px); }
+  .slick-next { left:  calc(100% + 20px); }
 
   /* Dots */
   .slick-dots {
@@ -623,157 +534,57 @@ const testimonials = [
     gap: 15px;
     justify-content: flex-end;
     position: absolute;
-    bottom: 25px;
-    right: 0;
+    bottom: 25px; right: 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0; margin: 0;
   }
-
   .slick-dots li {
-    width: 15px;
-    height: 15px;
+    width: 15px; height: 15px;
     background-color: rgba(0,0,0,0.2);
     border-radius: 50%;
     cursor: pointer;
     overflow: hidden;
   }
-
   .slick-dots li.slick-active { background-color: #2a3342; }
-
   .slick-dots li button {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background: transparent;
     border: none;
     cursor: pointer;
     font-size: 0;
   }
 
-  .testimonial-img-box {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .img-box {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content { width: calc(100% - 115px); }
-
-  .card-small-title {
-    font-size: 24px;
-    color: #2a3342;
-    font-weight: 700;
-    margin-bottom: 0;
-  }
-
-  .content > span {
-    font-size: 18px;
-    color: #556987;
-    display: block;
-    padding-top: 8px;
-  }
-
-  .extra-small-title {
-    font-size: 24px;
-    color: #2a3342;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 0;
-  }
-
-  .testi-content-inner {
-    padding: 26px 50px 10px 60px;
-    position: relative;
-  }
-  .testi-content-inner::before {
-    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-    content: "";
-    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/topquit.png');
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-  .testi-content-inner::after {
-    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-    content: "";
-    background-image: url('https://testdynamics.net/wp-content/themes/testdynamics/assets/images/bottom-quit.png');
-    background-position: bottom right;
-    background-repeat: no-repeat;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 991px) {
-    .current-wrapper { flex-direction: column-reverse; }
-    .current-wrapper > .col { width: 100%; }
-    .section-current-img { padding-left: 0; max-height: 360px; }
-    .satori-col-content, .satori-col-img { width: 100%; }
-    .satori-img-box { margin-left: 0; }
-    .testimonial-wrapper { grid-template-columns: 1fr; gap: 30px; }
-    .testi-content-inner { padding: 50px 35px; }
-  }
-
-  @media (max-width: 767px) {
-    .home-header-wrapper .sub-title { font-size: 36px; }
-    .hero-inner-content { padding: 60px 0 40px; }
-    .section-current-inner { gap: 24px 20px; }
-    .sesction-current-items { width: calc(50% - 10px); }
-  }
-
   @media (max-width: 1200px) {
     .slick-prev { right: calc(100% + 10px); }
-    .slick-next { left: calc(100% + 10px); }
+    .slick-next { left:  calc(100% + 10px); }
   }
-
   @media (max-width: 991px) {
     .slick-prev, .slick-next { display: none; }
     .testimonial-wrapper { grid-template-columns: 1fr; gap: 30px; padding-bottom: 60px; }
     .testi-content-inner { padding: 50px 35px; }
-    .slick-dots { right: 0; bottom: 15px; }
-  }
-
-  @media (max-width: 767px) {
-    .hero-inner-content { padding: 60px 0 200px; }
-    .section-current-inner { gap: 24px 20px; }
-    .sesction-current-items { width: calc(50% - 10px); }
-  }
-
-  @media (max-width: 480px) {
-    .satori-col-content, .satori-col-img { width: 100%; }
+    .slick-dots { bottom: 15px; }
   }
 </style>
 
 <script>
   const track = document.getElementById('slider-track') as HTMLElement;
-  const dots = document.querySelectorAll('#slick-dots li');
   const slides = document.querySelectorAll('#slider-track .testimonial-items');
+  const dots   = document.querySelectorAll('#slick-dots li');
+
   let current = 0;
 
   function goTo(index: number) {
     current = index;
     track.style.transform = `translateX(-${current * 100}%)`;
-    track.style.transition = 'transform 0.5s ease';
     dots.forEach((d, i) => d.classList.toggle('slick-active', i === current));
   }
 
   document.getElementById('testi-prev')?.addEventListener('click', () => {
     goTo((current - 1 + slides.length) % slides.length);
   });
-
   document.getElementById('testi-next')?.addEventListener('click', () => {
     goTo((current + 1) % slides.length);
   });
-
   document.querySelectorAll('#slick-dots li button').forEach((btn, i) => {
     btn.addEventListener('click', () => goTo(i));
   });
